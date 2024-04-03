@@ -19,7 +19,7 @@ format:
 - Vous
     - Dans quel domaine travaillez-vous ?
     - Le type de données ?
-    - Dans l'idéal, quel usage de Python si vous avez une idée ?
+    - Dans l'idéal, quel usage de Python (si vous avez une idée) ?
 
 ---
 
@@ -29,7 +29,7 @@ format:
 - Vous mettre le pied à l'étrier avec les bases du langage
 - Créer un espace de discussion pour préciser vos besoins
 - Éclairer certains aspects plus avancés
-- Vous accompagner sur vos projets.
+- Vous accompagner sur vos projets
 
 ---
 
@@ -45,7 +45,7 @@ format:
 
 - Formation orientée application
 - 2 intervenants : le chat comme espace vivant !
-- Exercices à la fin corrigés la séance d'après
+- Exercices à la fin, corrigés la séance d'après
 - Espace pour échanger à la fin sur vos sujets
 - Enregistrement des séances ?
 
@@ -124,17 +124,17 @@ Pour qu'une instruction devienne une action, il faut toute une série de médiat
 - Environnements spécifiques (OS et logiciels)
 - Formats spécifiques des données manipulées
 - Exprimer les instructions : langages de programmation
-- Penser la logique des instructions : algorithmiques
+- Penser la logique des instructions : algorithmique
 - Diversité d'outils facilitant la programmation
     - écrire, débugger, etc.
 
 ---
 
-## Conséquences : un apprentissage multiniveaux
+## Conséquences : un apprentissage multiniveau
 
 - Se familiariser aux environnements informatiques
-    - Ligne de commande, ..
-- Penser la structures des données et leurs diversités
+    - Ligne de commande, ...
+- Penser la structures des données et leur diversité
     - Format de fichier : csv ou xls ? Passage vers du relationnel ?
 - Penser la matérialité des pratiques
     - Stockage mémoire vive, cloud ou disque dur ?
@@ -164,7 +164,7 @@ Abstractions permettant d'écrire des instructions
 
 ---
 
-## Cinquante nuance de programmation
+## Cinquante nuances de programmation
 
 Programmer n'est pas forcément construire un logiciel
 
@@ -246,10 +246,10 @@ Programmer n'est pas forcément construire un logiciel
 ## Et plus généralement
 
 - libre et interopérable
-- versatile
+- polyvalent
 - pédagogique par design
 - enseigné de plus en plus tôt
-- Le plus utilisé en traitement des données
+- le plus utilisé en traitement des données
     - [Sondage stackoverflow](https://survey.stackoverflow.co/2023/#technology-most-popular-technologies) ; [TIOBE index](https://www.tiobe.com/tiobe-index/)
 
 ---
@@ -323,7 +323,7 @@ Namespaces are one honking great idea -- let's do more of those!
 
 ![](img/pythonversion.png){style="display:block; margin:auto;"}
 
-Release anuelle.
+Release anuelle
 
 
 ---
@@ -395,7 +395,7 @@ Une diversité d'outils adaptés à des pratiques différentes
 ## Plus généralement : Python, Julia, R ?
 
 
--   Des langages qui ont évolués
+-   Des langages qui ont évolué
     - Par exemple les *f-string*
 -   et qui évoluent :
     - Par exemple les normes de *gradual typing*
@@ -480,7 +480,7 @@ scripttoutfait.run()
 - Transformer des données
     - pour Iramuteq ou pour l’analyse de réseaux (mise en forme de corpus)
 - Automatiser des tâches
-    - Conversion pdf > textes
+    - conversion pdf > textes
 
 - Script dans logiciel
     QGIS ou dans OpenRefine
@@ -595,7 +595,7 @@ Pas en une fois
 ## C'est quoi un script ?
 
 - Une ligne de code
-- Un ensemble de ligne de code dans un fichier
+- Un ensemble de lignes de code dans un fichier
 - Un ensemble de fichiers dans un package
 
 Pour cela, il faut avoir Python installé
@@ -609,7 +609,7 @@ Pour cela, il faut avoir Python installé
 :::: column
 
 - Dans un fichier texte (+ Integrated (I)DE)
-- Dans le ”logiciel” Python (console interactive)
+- Dans le "logiciel" Python (console interactive)
 - Dans un Notebook (Interactive (I)DE)
 
 ::::
@@ -651,7 +651,7 @@ Le notebook n'est qu'un élément
 
 Interactive Design Environnment
 
-- un (simple) éditeur de text
+- un (simple) éditeur de texte
 - un IDE complet (VS Code)
 - un environnement Jupyter
 
