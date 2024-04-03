@@ -1,0 +1,717 @@
+---
+title: "Python pour les SHS"
+subtitle: "Pourquoi programmer en Python ?"
+author: "Émilien Schultz - Léo Mignot"
+date: 2024-04-08
+format: 
+    revealjs:
+        slideNumber: true
+---
+
+# Introduction
+
+---
+
+## Petit tour de table
+
+- Émilien Schultz
+- Léo Mignot
+- Vous
+    - Dans quel domaine travaillez-vous ?
+    - Le type de données ?
+    - Dans l'idéal, quel usage de Python si vous avez une idée ?
+
+---
+
+## Objectifs de cette formation
+
+- Montrer l’intérêt du langage Python pour les SHS
+- Vous mettre le pied à l'étrier avec les bases du langage
+- Créer un espace de discussion pour préciser vos besoins
+- Éclairer certains aspects plus avancés
+- Vous accompagner sur vos projets.
+
+---
+
+## Ce que cette formation n'est pas
+
+- de la théorie sur la programmation
+- un tour complet d'un langage
+- faire de vous des dévelopeurs.ses
+
+---
+
+## Organisation générale
+
+- Formation orientée application
+- 2 intervenants : le chat comme espace vivant !
+- Exercices à la fin corrigés la séance d'après
+- Espace pour échanger à la fin sur vos sujets
+- Enregistrement des séances ?
+
+Dépôt Github : [https://github.com/pyshs/CUSO2024](https://github.com/pyshs/CUSO2024)
+
+---
+
+## Vos données ?
+
+- Toujours mieux de travailler sur vos données
+- Pas obligatoire
+- Vous accompagner
+- Viser une analyse pour la dernière séance ?
+
+---
+
+## Déroulement de la formation
+
+1. Pourquoi programmer ?
+2. Les bases du langage Python
+3. Les bibliothèques & l'écosystème Python
+4. Données tabulaires, statistiques et visualisation
+5. Saisir des données non structurées
+6. Usages avancés/projets personnels
+
+
+---
+
+## Aujourd'hui
+
+- D'abord répondre à 3 questions
+    1. Pourquoi programmer (en recherche) ?
+    2. Pourquoi Python ?
+    3. Comment s'y mettre ?
+- Lancer un script
+    1. C'est quoi un script ?
+    2. Pourquoi les notebooks computationnels ?
+- Quelques démos
+
+
+# Pourquoi programmer ?
+
+*"Certains disent « Il faut coder », d’autres rétorquent « Il faut décoder »"* (Cardon, 2019)
+
+
+---
+
+## La numérisation de la science
+
+- Numérisation comme point de passage obligé 
+    - ["*L’historien de demain sera programmeur ou ne sera plus*" (Emmanuel Le Roy Ladurie, 1968)](https://journals.openedition.org/framespa/14370)
+    - ["*De la poussière à la lumière bleue*" de Caroline Muller et Frédéric Clavert, Signata, 2021](https://journals.openedition.org/signata/3136)
+- Croissance et circulation des données
+    - Comment les actionner ?
+- Courant profond et puissant de la science ouverte
+    - reproductibilité
+- Nouvelles méthodes & terrains en SHS
+    - médias sociaux, ...
+
+---
+
+## Programmer ?
+
+**Une définition**: utiliser un ensemble d'instructions (code/script) dans un langage (de programmation) pour faire réaliser (exécuter) à un ordinateur des opérations.
+
+![](img/programmer.png){style="display:block; margin:auto;"}
+
+
+Pour qu'une instruction devienne une action, il faut toute une série de médiations.
+
+---
+
+## Différentes "briques"
+
+- Fonctionnement d'un ordinateur (stockage, calcul, périphériques)
+- Environnements spécifiques (OS et logiciels)
+- Formats spécifiques des données manipulées
+- Exprimer les instructions : langages de programmation
+- Penser la logique des instructions : algorithmiques
+- Diversité d'outils facilitant la programmation
+    - écrire, débugger, etc.
+
+---
+
+## Conséquences : un apprentissage multiniveaux
+
+- Se familiariser aux environnements informatiques
+    - Ligne de commande, ..
+- Penser la structures des données et leurs diversités
+    - Format de fichier : csv ou xls ? Passage vers du relationnel ?
+- Penser la matérialité des pratiques
+    - Stockage mémoire vive, cloud ou disque dur ?
+
+---
+
+## Les langages de programmation
+
+Abstractions permettant d'écrire des instructions
+
+- Des langages différents (plus ou moins abstraits)
+- Des opérations partagées par tous les langages (opérations mathématiques)
+- Passer de l'instruction à l'action : descendre au niveau du matériel
+    - Compilation (logiciel)
+    - Interprétation
+---
+
+
+## Parenthèse : plus ou moins de familiarité à la programmation
+
+- Deux grandes philosophies :
+    - CLI : la ligne de commande (linux notamment)
+    - GUI : les interfaces graphiques (WYGIWYS)
+- La ligne de commande familiarise aux instructions écrites
+    - Par exemple, `mkdir DOSSIER`  crée un dossier
+    - [Pour aller plus loin](https://melaniewalsh.github.io/Intro-Cultural-Analytics/01-Command-Line/01-The-Command-Line.html)
+
+---
+
+## Cinquante nuance de programmation
+
+Programmer n'est pas forcément construire un logiciel
+
+![Choisir](img/langages.png){style="display:block; margin:auto;"}
+
+
+---
+
+## La programmation scientifique
+
+- Script : réaliser des petites tâches spécifiques
+- Interactivité : tester et expérimenter
+- Recherche : des outils spécifiques
+
+::: {style="font-size: 70%;"}
+« in contrast to software engineering, there is no externally speciﬁed goal or design target. Instead, the user explores and discovers their goal as they gain understanding from iteratively executing the code and thinking about the results and their data. » (Granger et Perez, 2021) 
+:::
+---
+
+## Programmer pour la recherche : entre standardisation et adaptation
+
+- créer un dialogue interactif avec l'ordinateur (exploration et stabilisation)
+- formaliser des manipulations pour les partager (reproductibilité des traitements)
+- adapter à des tâches non prévues par les logiciels (flexibilité)
+- interconnecter des opérations sinon séparées (glue)
+
+---
+
+## Non exclusif avec les logiciels
+
+![Choisir](img/choisir.png){style="display:block; margin:auto;"}
+
+---
+
+## Alors pourquoi programmer ?
+
+- Dépasser ce qui est prévu dans les logiciels
+- Construire des outils pour soi et les autres
+- Formaliser et automatiser son traitement
+- Utiliser les ressources que d'autres développent
+- Mieux maîtriser l'infrastructure numérique en général
+
+
+---
+
+## Vers la reproductibilité
+
+![](img/reproductibility.png){style="display:block; margin:auto;"}
+
+::: {style="font-size: 50%;"}
+ Juliette Taka, & Nicolas M. Thiéry. (2018). Publishing reproducible logbooks explainer comic strip. Zenodo. <https://doi.org/10.5281/zenodo.4421040>
+:::
+
+---
+
+# Pourquoi Python ?
+
+---
+
+## Parce que tout est possible
+
+![](img/python.png){style="display:block; margin:auto;"}
+
+---
+
+## Parce que langage de haut niveau
+
+![](img/clevel.jpeg){style="display:block; margin:auto;"}
+
+
+---
+
+## Parce que les data science
+
+![](img/pythondatascientist.jpg){style="display:block; margin:auto;"}
+
+---
+
+## Et plus généralement
+
+- libre et interopérable
+- versatile
+- pédagogique par design
+- enseigné de plus en plus tôt
+- Le plus utilisé en traitement des données
+    - [Sondage stackoverflow](https://survey.stackoverflow.co/2023/#technology-most-popular-technologies) ; [TIOBE index](https://www.tiobe.com/tiobe-index/)
+
+---
+
+## Une lingua franca
+
+![](img/python-programmers-python.jpeg){style="display:block; margin:auto;"}
+
+---
+
+## Le produit d'une histoire
+
+Héritage d'une réflexion : [The Origins of Python, Lambert Meertens, Inference, 2022](https://inference-review.com/article/the-origins-of-python)
+
+```
+"It makes sense to think of the realm of programming languages as an ecosystem in which languages occupy their own niches. FORTRAN’s niche is high-performance scientific programming, involving heavy-duty numerical computation; that of COBOL is administration, based on files of data records. The C language is designed for systems programming, originally developed specifically for the Unix operating system. Just as there is no such thing as a general-purpose transportation vehicle, a truly one-size-fits-all general-purpose programming language does not exist; for a given highly specialized application domain it will always be possible to design a language tailored to, and better suited for, the specific needs of that domain [...]  
+
+Python was originally designed to serve as a high-level scripting language for the Amoeba project. ABC was completely unsuitable for this purpose; it lived in a world of its own, shielding its users—by design—from the outside world. Python was expressly designed to interface with that outside world"
+
+```
+
+---
+
+## Une philosophie résumée par Tim Peters {style="font-size: 40%;"}
+
+<center>
+
+Beautiful is better than ugly.
+
+Explicit is better than implicit.
+
+Simple is better than complex.
+
+Complex is better than complicated.
+
+Flat is better than nested.
+
+Sparse is better than dense.
+
+Readability counts.
+
+Special cases aren't special enough to break the rules.
+
+Although practicality beats purity.
+
+Errors should never pass silently.
+
+Unless explicitly silenced.
+
+In the face of ambiguity, refuse the temptation to guess.
+
+There should be one-- and preferably only one --obvious way to do it.
+
+Although that way may not be obvious at first unless you're Dutch.
+
+Now is better than never.
+
+Although never is often better than *right* now.
+
+If the implementation is hard to explain, it's a bad idea.
+
+If the implementation is easy to explain, it may be a good idea.
+
+Namespaces are one honking great idea -- let's do more of those!
+
+</center>
+
+---
+
+## En perpétuelle évolution
+
+![](img/pythonversion.png){style="display:block; margin:auto;"}
+
+Release anuelle.
+
+
+---
+
+## Ancré dans la pratique scientifique
+
+![](img/scipy2002.png){style="display:block; margin:auto;"}
+
+---
+
+## Python : un langage & un écosystème
+
+![](img/ecosysteme.png){style="display:block; margin:auto;"}
+
+
+
+# Comment s'y mettre ?
+
+---
+
+## Au commencement : un choix
+
+Une diversité d'outils adaptés à des pratiques différentes
+
+![](img/choix.png){style="display:block; margin:auto;"}
+
+---
+
+## Une question récurrente
+
+::: columns
+
+:::: column
+![](img/pythonr1.jpeg)
+::::
+
+:::: column
+![](img/pythonr2.jpeg)
+::::
+
+:::
+
+
+---
+
+## Python ou R ? Beaucoup de points communs
+
+
+::: columns
+
+:::: column
+![](img/pythonr3.jpeg){width=150%}
+::::
+
+:::: column
+
+- Python et R ++ pour traitement de données
+- Python ++ interface informatique/privé
+- R ++ pour statistiques
+- Python ++ pour ML
+- Python ++ production
+
+::::
+
+:::
+
+---
+
+## Plus généralement : Python, Julia, R ?
+
+
+-   Des langages qui ont évolués
+    - Par exemple les *f-string*
+-   et qui évoluent :
+    - Par exemple les normes de *gradual typing*
+-   Abstraction progressive
+    - Cas du projet Jupyter
+-   Pas de "meilleur langage dans l'absolu"
+
+---
+
+## La particularité des SHS
+
+::: columns
+
+:::: column
+![](img/shs.png)
+::::
+
+:::: column
+
+- centralité de la problématique
+- diversité de méthodes
+- diversité des données
+- diversité de cultures numériques 
+    - des communautés très computationnelles
+    - d'autres moins ...
+
+::::
+:::
+
+---
+
+## Un paysage en transformation
+
+
+![](img/usagepythonshs.png){style="display:block; margin:auto;"}
+
+[Pratiques numériques des chercheurs, M. Le Béchec, 2020](https://hal-lara.archives-ouvertes.fr/hal-03545512)
+
+---
+
+## Tous programmeurs ?
+
+<br>
+
+- Non
+    - Et pas nécessairement en Python
+- Mais une culture numérique devient indispensable
+- Cela facilite les échanges
+- Et une adaptation aux évolutions
+    - LLM, IA, tralala
+
+---
+
+## Une conception étendue
+
+Différents usages et besoins
+
+![](img/apprentissage.png){style="display:block; margin:auto;"}
+
+
+---
+
+## Usages "orientés mimétisme"
+
+- Suivre un tutoriel
+    - ["Whisper pour retranscrire des entretiens", Yacine Chitour](https://www.css.cnrs.fr/whisper-pour-retranscrire-des-entretiens/) 
+- Utiliser une ligne de commande pour lancer une collecte de données avec un outil dédié
+    - feu Twark pour Twitter
+- Lancer le code d’un notebook existant avec des modifications mineures
+
+```{.python}
+import scripttoutfait
+scripttoutfait.run()
+```
+
+---
+
+## Usages "orientés scripts"
+
+- Manipuler des données
+    - Découper un fichier trop volumineux
+- Transformer des données
+    - pour Iramuteq ou pour l’analyse de réseaux (mise en forme de corpus)
+- Automatiser des tâches
+    - Conversion pdf > textes
+
+- Script dans logiciel
+    QGIS ou dans OpenRefine
+
+---
+
+## Usages "orientés statistiques"
+
+- Construire un graphique
+    - Juxtaposition de plusieurs éléments temporels
+- Faire des statistiques
+    - Notebook permettant l’exploration statistique des données d’une enquête en ligne
+- Exploration de textes
+    - Bibliothèques de TAL pour analyse thématique
+- Parallélisation des calculs sur des serveurs
+
+---
+
+## Usages "orientés automatisation"
+
+- Systématiser des collectes API
+    - OCR Gallica, forums, ...
+- Surveillance d'événements
+    - modifications d’un site
+- Workflow exécutable
+    - Ensemble des étapes collecte/analyse/résultats
+- Déployer un site web en Python
+
+---
+
+## Usages "orientés IA"
+
+
+- Manipuler les modèles
+    -   Possibilités ouvertes par HuggingFace & co
+- Entraîner des modèles
+    - Détection d'entitées nommées à façon
+- Fine tuner des LLM
+
+---
+
+## Usages "orientés instrumentation"
+
+- Généraliser son code en fonction réxécutable
+- Publier une bibliothèque
+- Déployer un service en ligne
+
+---
+
+## Usages "orientés logiciel"
+
+- Développer une bibliothèque dédiée générique (Ipysigma)
+- Développer un module pour un logiciel (QGIS?)
+
+---
+
+## Caveat avant de commencer
+
+- Programmer ≠ tout savoir
+    - De nombreux domaines spécialisés (ML, NLP, Réseaux, ...)
+- Pas une baguette magique
+- Courbe d'apprentissage potentiellement longue (mais...)
+- Importance des ressources locales (collègues)
+
+![](img/phdcomicbug.png){style="display:block; margin:auto;"}
+
+---
+
+## Progresser ?
+
+Pas en une fois
+
+- Développer l'espace des possibles
+    - Bases du language et philosophie
+    - Des exemples de ce qu'il est possible de faire
+- Identifier un usage pertinent pour soi
+    - Construire de manière itérative sa pratique
+- Améliorer sa pratique
+    - Ajouter les bonnes pratiques de code / partage
+    - Renforcer les aspects "théoriques" et "esthétiques"
+
+---
+
+## Valoriser les petites victoires
+
+![](img/phcomicssolution.png){style="display:block; margin:auto;"}
+
+---
+
+## De nombreuses ressources disponibles
+
+::: columns
+
+:::: column
+![](img/book2.png){style="display:block; margin:auto; width:40%"}
+::::
+
+:::: column
+
+![](img/pyshs.jpg){style="display:block; margin:auto; width:40%"}
+
+::::
+:::
+
+- [Online : Python pour la data science, Lino Galiana](https://pythonds.linogaliana.fr/)
+- [Online : Python for cultural studies, Melanie Walsh](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html)
+
+---
+
+# Exécuter un script
+
+## C'est quoi un script ?
+
+- Une ligne de code
+- Un ensemble de ligne de code dans un fichier
+- Un ensemble de fichiers dans un package
+
+Pour cela, il faut avoir Python installé
+
+---
+
+## Python comme logiciel
+
+::: columns
+
+:::: column
+
+- Dans un fichier texte (+ Integrated (I)DE)
+- Dans le ”logiciel” Python (console interactive)
+- Dans un Notebook (Interactive (I)DE)
+
+::::
+
+:::: column
+
+![](img/architecture.png){style="display:block; margin:auto; width:70%"}
+
+::::
+:::
+
+---
+
+## Notebooks computationnels ?
+
+Philosophie générale de la programmation lettrée
+
+![](img/jupyter.png){style="display:block; margin:auto"}
+
+[Préprint : Du laboratoire à Jupyter : La trajectoire d'un instrument logiciel libre de la science ouverte, 2023](https://hal.science/hal-04316428/)
+
+
+---
+
+## Au-delà : la programmation en recherche
+
+Le notebook n'est qu'un élément
+
+- D'une perspective ordinateur 
+    - Read-Eval-Print loop (REPL)
+- Vers une perspective de utilisateur 
+    - Write-Eval-Think-Loop (WETL)
+
+[Granger, Brian E., and Fernando Perez. 2021. “Jupyter: Thinking and Storytelling with Code and Data.” Computing in Science and Engineering 23 (2): 7–14.](https://doi.org/10.1109/MCSE.2021.3059263)
+
+---
+
+## Quel IDE choisir
+
+Interactive Design Environnment
+
+- un (simple) éditeur de text
+- un IDE complet (VS Code)
+- un environnement Jupyter
+
+Ce que ça change ?
+
+- Plus d'options
+- Plus de complexité
+
+--- 
+
+## Nous : notebooks Jupyter
+
+Avantages :
+
+- Ludique et interactif
+- Avoir tous les éléments au même endroit
+- Très utilisés (["Ten computer codes that transformed science", Nature, 2021](https://www.nature.com/articles/d41586-021-00075-2))
+
+Quelques limites
+
+- Orde d'exécution des cellules
+- Vite confus
+
+Si vous voulez des critiques : [I don't like notebooks.- Joel Grus](https://www.youtube.com/watch?v=7jiPeIFXb6U)
+
+---
+
+## Anaconda : un environnement intégré de data science
+
+![](img/anaconda.png){style="display:block; margin:auto"}
+
+
+## Non pas un mais des environnements
+
+Un programme/logiciel :
+
+- comprend du code
+- et dépend d'autres codes (des bibliothèques)
+
+Nécessité d'installer ces bibliothèques qui constituent un environnement
+
+Vous pouvez avoir plusieurs environnements virtuels
+
+- Anaconda gère ces environnements
+
+---
+
+## Maintenant : exécutons des scripts
+
+- un script sans dépendance que nous allons décortiquer
+- une démo d'analyse de données
+- une démo de construction d'un réseau
+- une démo d'une petite application
+
+<!--
+
+- où faire une introduction à la ligne de commande
+- trouver un graphique de la croissance d'usage de Python leaderboard
+- notion de procédure, d'état, de flux, 
+- place de chatgpt dans le processus de programmation
+- parler de la complémentarité entre les langages (bibliothèques agnostiques)
+
+-->
