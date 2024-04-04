@@ -6,6 +6,7 @@ date: 2024-04-08
 format: 
     revealjs:
         slideNumber: true
+        #embed-resources: true
 ---
 
 # Introduction
@@ -19,7 +20,7 @@ format:
 - Vous
     - Dans quel domaine travaillez-vous ?
     - Le type de données ?
-    - Dans l'idéal, quel usage de Python (si vous avez une idée) ?
+    - Dans l'idéal, quel usage de Python ?
 
 ---
 
@@ -80,7 +81,7 @@ Dépôt Github : [https://github.com/pyshs/CUSO2024](https://github.com/pyshs/CU
     1. Pourquoi programmer (en recherche) ?
     2. Pourquoi Python ?
     3. Comment s'y mettre ?
-- Lancer un script
+- Puis lancer un script
     1. C'est quoi un script ?
     2. Pourquoi les notebooks computationnels ?
 - Quelques démos
@@ -130,12 +131,12 @@ Pour qu'une instruction devienne une action, il faut toute une série de médiat
 
 ---
 
-## Conséquences : un apprentissage multiniveau
+## Conséquences : un apprentissage multiniveaux
 
 - Se familiariser aux environnements informatiques
     - Ligne de commande, ...
 - Penser la structures des données et leur diversité
-    - Format de fichier : csv ou xls ? Passage vers du relationnel ?
+    - Format de fichier : csv ou xls ?
 - Penser la matérialité des pratiques
     - Stockage mémoire vive, cloud ou disque dur ?
 
@@ -164,7 +165,7 @@ Abstractions permettant d'écrire des instructions
 
 ---
 
-## Cinquante nuances de programmation
+## Cinquante nuances
 
 Programmer n'est pas forcément construire un logiciel
 
@@ -195,7 +196,7 @@ Programmer n'est pas forcément construire un logiciel
 
 ## Non exclusif avec les logiciels
 
-![Choisir](img/choisir.png){style="display:block; margin:auto;"}
+![](img/choisir.png){style="display:block; margin:auto;"}
 
 ---
 
@@ -218,7 +219,6 @@ Programmer n'est pas forcément construire un logiciel
  Juliette Taka, & Nicolas M. Thiéry. (2018). Publishing reproducible logbooks explainer comic strip. Zenodo. <https://doi.org/10.5281/zenodo.4421040>
 :::
 
----
 
 # Pourquoi Python ?
 
@@ -537,7 +537,7 @@ scripttoutfait.run()
 
 ---
 
-## Caveat avant de commencer
+## *Caveat* avant de commencer
 
 - Programmer ≠ tout savoir
     - De nombreux domaines spécialisés (ML, NLP, Réseaux, ...)
@@ -570,7 +570,7 @@ Pas en une fois
 
 ---
 
-## De nombreuses ressources disponibles
+## Ressources
 
 ::: columns
 
@@ -588,7 +588,6 @@ Pas en une fois
 - [Online : Python pour la data science, Lino Galiana](https://pythonds.linogaliana.fr/)
 - [Online : Python for cultural studies, Melanie Walsh](https://melaniewalsh.github.io/Intro-Cultural-Analytics/welcome.html)
 
----
 
 # Exécuter un script
 
