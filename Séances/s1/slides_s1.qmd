@@ -1,22 +1,21 @@
 ---
 title: "Python pour les SHS"
-subtitle: "Pourquoi programmer en Python ?"
+subtitle: "Séance 1 - Pourquoi programmer en Python ?"
 author: "Émilien Schultz - Léo Mignot"
 date: 2024-04-08
 format: 
     revealjs:
         slideNumber: true
         #embed-resources: true
----
 
-# Introduction
 
 ---
 
 ## Petit tour de table
 
-- Émilien Schultz
-- Léo Mignot
+- Nous : ancrage SHS & recherche
+    - Émilien Schultz
+    - Léo Mignot
 - Vous
     - Dans quel domaine travaillez-vous ?
     - Le type de données ?
@@ -37,8 +36,10 @@ format:
 ## Ce que cette formation n'est pas
 
 - de la théorie sur la programmation
-- un tour complet d'un langage
-- faire de vous des dévelopeurs.ses
+- un tour complet du langage
+- faire de vous des développeurs.ses
+- la seule manière d'aborder la programmation
+- un cours spécialisé sur certains domaines (ML, etc.)
 
 ---
 
@@ -104,7 +105,6 @@ Dépôt Github : [https://github.com/pyshs/CUSO2024](https://github.com/pyshs/CU
 - Courant profond et puissant de la science ouverte
     - reproductibilité
 - Nouvelles méthodes & terrains en SHS
-    - médias sociaux, ...
 
 ---
 
@@ -115,7 +115,7 @@ Dépôt Github : [https://github.com/pyshs/CUSO2024](https://github.com/pyshs/CU
 ![](img/programmer.png){style="display:block; margin:auto;"}
 
 
-Pour qu'une instruction devienne une action, il faut toute une série de médiations.
+Pour qu'une instruction devienne une action, il faut toute une série de médiations du conceptuel au matériel.
 
 ---
 
@@ -169,7 +169,7 @@ Abstractions permettant d'écrire des instructions
 
 Programmer n'est pas forcément construire un logiciel
 
-![Choisir](img/langages.png){style="display:block; margin:auto;"}
+![](img/langages.png){style="display:block; margin:auto;"}
 
 
 ---
@@ -178,7 +178,9 @@ Programmer n'est pas forcément construire un logiciel
 
 - Script : réaliser des petites tâches spécifiques
 - Interactivité : tester et expérimenter
-- Recherche : des outils spécifiques
+- Spécificité : des outils spécifiques
+- Temporaire : évolution permanente
+- "Amateurisme" : pas le coeur de métier
 
 ::: {style="font-size: 70%;"}
 « in contrast to software engineering, there is no externally speciﬁed goal or design target. Instead, the user explores and discovers their goal as they gain understanding from iteratively executing the code and thinking about the results and their data. » (Granger et Perez, 2021) 
@@ -273,7 +275,7 @@ Python was originally designed to serve as a high-level scripting language for t
 
 ---
 
-## Une philosophie résumée par Tim Peters {style="font-size: 40%;"}
+## Traversé par une philosophie {style="font-size: 40%;"}
 
 <center>
 
@@ -397,11 +399,11 @@ Une diversité d'outils adaptés à des pratiques différentes
 
 -   Des langages qui ont évolué
     - Par exemple les *f-string*
--   et qui évoluent :
+-   Et qui évoluent
     - Par exemple les normes de *gradual typing*
 -   Abstraction progressive
     - Cas du projet Jupyter
--   Pas de "meilleur langage dans l'absolu"
+-   Pas de "meilleur langage" dans l'absolu
 
 ---
 
@@ -568,6 +570,7 @@ Pas en une fois
 
 ![](img/phcomicssolution.png){style="display:block; margin:auto;"}
 
+Possibilité d'un vrai plaisir
 ---
 
 ## Ressources
@@ -669,7 +672,7 @@ Avantages :
 - Avoir tous les éléments au même endroit
 - Très utilisés (["Ten computer codes that transformed science", Nature, 2021](https://www.nature.com/articles/d41586-021-00075-2))
 
-Quelques limites
+Quelques limites :
 
 - Orde d'exécution des cellules
 - Vite confus
@@ -683,7 +686,7 @@ Si vous voulez des critiques : [I don't like notebooks.- Joel Grus](https://www.
 ![](img/anaconda.png){style="display:block; margin:auto"}
 
 
-## Non pas un mais des environnements
+## Multiplier les environnements
 
 Un programme/logiciel :
 
@@ -700,7 +703,8 @@ Vous pouvez avoir plusieurs environnements virtuels
 
 ## Maintenant : exécutons des scripts
 
-- un script sans dépendance que nous allons décortiquer
+Quelques démos :
+
 - une démo d'analyse de données
 - une démo de construction d'un réseau
 - une démo d'une petite application
