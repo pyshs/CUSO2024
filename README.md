@@ -1,8 +1,8 @@
 # CUSO2024
 
-![Python pour les SHS organisé par le CUSO](https://numerique.cuso.ch/?id=7010&tx_displaycontroller[showUid]=7356)
-
 Ce dépôt contient tous les éléments du cours (slides, codes, etc.)
+
+[Page officielle du cours Python pour les SHS organisé par le CUSO](https://numerique.cuso.ch/?id=7010&tx_displaycontroller[showUid]=7356)
 
 **Séances de 16h-18h30** : 8/04 - 15/04 - 22/04 - 29/04 - 06/05 - 13/05 
 
