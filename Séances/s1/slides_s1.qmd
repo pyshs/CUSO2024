@@ -712,9 +712,14 @@ Quelques démos :
 <!--
 
 - où faire une introduction à la ligne de commande
-- trouver un graphique de la croissance d'usage de Python leaderboard
-- notion de procédure, d'état, de flux, 
 - place de chatgpt dans le processus de programmation
 - parler de la complémentarité entre les langages (bibliothèques agnostiques)
+- the best second langage
+- remarque général de boutons pour lancer les démos
+
+As a general-purpose programming language, Python is the standard go-to choice for software developers breaking into data science. Plus, Python’s focus on productivity makes it a more suitable tool to build complex applications. 
+
+By contrast, R is widely used in academia and certain sectors, such as finance and pharmaceuticals. It is the perfect language for statisticians and researchers with limited programming skills. 
+
 
 -->
