@@ -8,6 +8,7 @@ date: 2024-04-15
 format: 
     revealjs:
         slideNumber: true
+        scrollable: true # voir si le rendu est ok
 ---
 
 
@@ -26,7 +27,7 @@ format:
 
 - Fichier `requirements.txt` qui contient l'information
     - `pip install -m requirements.txt`
-- A la main ...
+- À la main ...
 
 
 # Autopsie d'un script
@@ -342,6 +343,7 @@ if len(phrase) == 0:
 - caractéristique du langage : 4 espaces pour rentrer dans un bloc de code (un sous élément de script)
 - **indispensable**
 - facilite la lecture du code
+![](img/indentation.png){style="display:block; margin:auto;" #fig-foo width="40%"}
 
 ---
 
@@ -501,7 +503,7 @@ with open("dossier.fichier.txt","r") as f
 
 ## Écrire
 
-Similaire, mais avec l'option `r`, et les méthodes `read`
+Similaire, mais avec l'option `w`, et les méthodes `write`
 
 
 # Les fonctions
