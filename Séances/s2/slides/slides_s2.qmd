@@ -1,0 +1,549 @@
+---
+title: "Python pour les SHS"
+execute:
+  echo: true
+subtitle: "Séance 2 : autopsie d'un script"
+author: "Émilien Schultz - Léo Mignot"
+date: 2024-04-15
+format: 
+    revealjs:
+        slideNumber: true
+---
+
+
+## Lancer un script
+
+- Différents supports :
+    - ligne de commande
+    - script
+    - notebooks
+- Nécessité d'avoir l'environnement installé
+    - des dépendances
+
+---
+
+## Installer des dépendances
+
+- Fichier `requirements.txt` qui contient l'information
+    - `pip install -m requirements.txt`
+- A la main ...
+
+
+# Autopsie d'un script
+
+
+## Le script
+
+Le script est sur le dépôt.
+
+- Un fichier texte au format `.py`
+- L'exécuter :
+    - Ligne par ligne dans l'interpréteur
+    - Comme un fichier avec `python script.py`
+    - En le copiant dans un notebooks
+        - Soit local
+        - Soit en service en ligne
+
+---
+
+## Quelques rappels sur les notebooks
+
+- Un fichier unique qui contient les éléments `.ipynb`
+- Des cellules 
+    - Code
+    - Texte
+- La coloration syntaxique
+- Importance des raccourcis
+- Notion de noyau
+
+---
+
+## Le (code) bon, brute et truand
+
+- Des contraintes de syntaxe fortes sinon ça ne marche pas
+- Des règles de qualité pour écrire du code
+    - PEP8 pour Python https://peps.python.org/pep-0008/
+- L'importance est souvent d'abord d'écrire
+
+---
+
+## Exécuter le script dans un notebook
+
+```{.python code-line-numbers="true"}
+sortie_fichier = True
+nombre_min_lettres = 4
+phrase = input("Écrivez une phrase: ")
+liste_mots = phrase.split(" ")
+nombre_mots = len(liste_mots)
+if len(phrase) == 0:
+    print("Vous n'avez rien écrit")
+else:
+    compteur = 0
+    for i in liste_mots:
+        if len(i) >= nombre_min_lettres:
+            compteur+=1
+    proportion = round(100*compteur/nombre_mots,2)
+    informations = {"Total":compteur,"Proportion":proportion,
+                   "Phrase":phrase,"Seuil":nombre_min_lettres}
+    sortie = f"Proportion de mots avec {nombre_min_lettres} lettres ou plus : {proportion}"
+    print(sortie)
+    if sortie_fichier:
+        with open("resultat.txt","w") as f:
+            f.write(str(informations))
+```
+
+---
+
+## Ligne 1 : la variable
+
+```{.python code-line-numbers="false"}
+sortie_fichier = True
+```
+
+- Création d'une nouvelle entité `sortie_fichier`
+- Attribution d'un contenu `true`
+- Variable avec un type : typage dynamique
+
+---
+
+## En passant : les fonctions standards
+
+- Connaître le type avec `type(variable)`
+- Les fonctions : un ensemble d'outils qui permettent de faire une action :
+    - un nom, par ex `type`
+    - une manière de les appliquer sur une entrée `type(entrée)`
+- autre exemple : afficher avec `print`
+
+---
+
+
+## C'est quoi une variable ?
+
+Une entité qui existe dans l'exécution du programme :
+
+- avec un nom
+    - convention de nommage
+    - à nous de choisir
+    - rester explicite
+- avec un contenu
+    - qui détermine ce que l'on peut en faire
+
+Supprimer une variable : `del variable`
+
+---
+
+## Les espaces dans tout ça ?
+
+- Pas d'espaces dans les noms
+- Mais entre les termes : pas de souci
+- Dans beaucoup de situation, pas de souci pour sauter une ligne (après une virgule)
+- Si besoin de sauter à la ligne, échapper l'espace avec `\`
+
+---
+
+## Ligne 2 : variable encore
+
+
+Un autre type
+
+```{python}
+nombre_min_lettres = 4
+type(nombre_min_lettres)
+```
+
+Comme c'est un entier, il est possible de manipuler cette variable comme un nombre
+
+```{python}
+nombre_min_lettres + 10
+```
+
+Attention, le nom est important
+
+```{python}
+#| error: true
+Nombre_min_lettres
+```
+
+---
+
+## Lire les erreurs
+
+Les erreurs sont importantes
+
+- Il est normal d'en faire
+    - Permettre d'apprendre par essai/erreur
+- Lire la fin du message d'erreur pour comprendre
+- Remonter la trace si nécessaire
+
+
+
+---
+
+## Ligne 3 : une entrée
+
+```{.python}
+phrase = input("Écrivez une phrase: ")
+```
+
+- une autre fonction standard `input`
+- un autre type de variable : `str`
+
+---
+
+## Les chaînes de caractères
+
+- Quels guillemets ? Tous : `'`, `"`, `"""`
+- Caractères spéciaux : ex les sauts de ligne `\n`
+- Échapper une chaîne de caractères `'Je n\'y pense pas'`
+- Des manipulations différentes :
+    - additionner les chaines : concaténer
+    - sélectioner un caractère : `phrase[3]`
+- Types et opérations : 
+
+```{python}
+#| error: true
+"dix"  + 10
+```
+
+---
+
+## Ligne 4 : les méthodes
+
+```{.python}
+liste_mots = phrase.split(" ")
+```
+
+Les variables sont des **objets** qui contiennent des **méthodes**
+
+- Le `.`permet d'accéder au contenu d'un objet
+    - attribut
+    - méthode
+- Une méthode réalise une opération 
+    - sur l'objet
+    - ou pas
+- Dans ce cas, coupe sur le type de segment identifié et renvoie une liste
+- Autre exemple : mettre en majuscule avec `.upper()`
+
+---
+
+## Les listes
+
+Encore un type
+
+- Ensemble indexé par les entiers 0, 1, 2, 3
+- Déclaration : `liste = [53, "deux", 1]`
+- Sélection d'éléments :
+    - `liste[1]` (deuxième élément)
+    - `liste[1:]` (tranche de l'élément 2 à la fin)
+- Ajouter `liste.append("nouvel élément")`
+- Et d'autres méthodes ...
+
+---
+
+## Ligne 5 : nouvelle variable
+
+- Fonction `len` qui renvoie la longueur d'un ensemble
+    - Définie pour les ensembles : listes, chaînes de caractères, etc.
+
+---
+
+## Les types de base existants :
+
+- *bool* : booléens
+- *int* : entiers
+- *float* : nombre à virgule
+- *str* : chaînes de caractères
+- *list* : listes (ensemble indexé par des nombres entiers)
+- *dict* : dictionnaires (ensemble indexé par des clés)
+- *set* : ensemble non ordonné
+- *tuples*, *bytes*, etc.
+
+---
+
+## La valeur nulle 
+
+Un type spécifique, la valeur nulle `None`
+
+# Structure du  script
+
+## Les blocs des scripts
+
+- Un script est un écoulement d'instruction
+    - Exécutées les unes après les autres
+- Cet écoulement est organisé par des blocs de flux :
+    - Conditions
+    - Répétitions
+
+---
+
+## Conditions : if, etc.
+
+Le fait de faire un choix en fonction de l'évaluation de la vérité de quelque chose
+
+Pour faire une condition il faut écrire une équation de vérité
+
+```{.python}
+if CONDITION:
+    CODE 1
+else:
+    CODE 2
+```
+
+Le CODE 1 sera exécuté si la condition est vérifiée ; sinon ce sera le CODE 2.
+
+---
+
+## Equation de vérité
+
+Une formule dont le résultat est vrai ou faux
+
+- Des variables qui ont des valeurs
+- L'expression d'une formule sur ces valeurs
+- Un résultat qui peut être vrai ou faux
+
+Par exemple, si on a une variable `test`:
+
+- `test is None`
+- `test == 10`
+- `type(test) == str`
+
+Ce sera vrai/faux en fonction de la valeur de test
+
+---
+
+## Logique booléenne
+
+La manipulation des tables de vérité est formalisée en logique booléenne, avec des opérations qui permettent des combinaisons 
+
+- et / &
+- ou / |
+- non / ~
+
+Possible donc d'exprimer des conditions complexes
+
+---
+
+## Ligne 6 : condition sur l'entrée
+
+```{.python}
+if len(phrase) == 0:
+    print("Vous n'avez rien écrit")
+```
+
+- test si la longueur de la variable phrase vaut 0
+- si c'est le cas (vrai)
+    - affiche (print) un texte
+- **le code du bloc est indenté de 4 espaces**
+
+---
+
+## Python et les indentations
+
+- caractéristique du langage : 4 espaces pour rentrer dans un bloc de code (un sous élément de script)
+- **indispensable**
+- facilite la lecture du code
+
+---
+
+## Ligne 8+ : bloc else
+
+Si la phrase n'est pas vide, c'est ce bloc qui est exécuté
+
+- La ligne 9 définit une variable à 0
+
+---
+
+## Ligne 10 : nouveau bloc, une boucle
+
+- une boucle répète une opération
+- en Python, la boucle for parcourt un ensemble
+    - à chaque étape met la valeur dans une variable temporaire
+
+``` {.python}
+
+for VARIABLE_TEMPORAIRE in ENSEMBLE:
+    CODE avec VARIABLE_TEMPORAIRE
+
+```
+
+Chaque élément de `liste_mots` est pris
+
+```{python}
+for element in ["ceci", "est", 1, "mot"]:
+    print(element)
+```
+
+---
+
+## Tout peut être itéré
+
+```{python}
+for lettre in "Un texte":
+    print(lettre)
+```
+
+Et des formes plus compliquées
+
+```{python}
+for rang, lettre in enumerate("Un texte"):
+    print(rang, lettre)
+```
+
+---
+
+## Générer une liste avec range
+
+Fonction `range` qui permet de générer un ensemble d'entiers
+
+- `range(0, 10)` : entiers entre 0 et 10
+
+---
+
+## Complétion de liste
+
+Possible de condenser une boucle :
+
+```{python}
+[i+10 for i in range(0, 10)]
+```
+
+---
+
+## Ligne 11/12 : tester une condition à chaque élément
+
+Pour chaque élément de `liste_mots`, la condition teste si sa longueur est supérieur à la valeur de la variable `nombre_min_lettres`
+
+Et si c'est le cas, augmente la variable compteur de 1
+
+---
+
+## Les structures algorithmiques
+
+
+La forme :
+- compteur à 0
+- boucle sur un ensemble
+- addition de 1 sur une condition
+
+Constitue une structure de comptage.
+
+Les structures de comptages sont conceptualisées dans le cadre de l'algorithmique. 
+
+---
+
+## Ligne 13 : faire un calcul
+
+- la fonction `round` permet d'arrondir
+- les données sont numériques, il est possible de faire un calcul
+
+---
+
+## Ligne 14 : dictionnaire résumé
+
+``` {.python}
+ informations = {"Total":compteur, "Proportion":proportion,
+                   "Phrase":phrase,"Seuil":nombre_min_lettres}
+```
+
+- rassembler les informations
+- dictionnaire bon conteneurs
+    - penser au format JSON : dictionnaires, listes, valeurs
+
+---
+
+## Ligne 15 : formattage de chaîne de caractères
+
+Mettre en forme du texte est fréquent : on parle de formattage
+
+Différentes manières suivant les versions de Python (si variable est de type texte)
+- concaténer `"un" + variable`
+- utiliser des token : `"un %d" % variable``
+- utiliser les f-strings : `f"un {var}"`
+
+---
+
+## lecture/écriture de texte/binaire dans un fichier
+
+Fichier est stocké sur le disque dur et non pas dans la mémoire vive :
+
+- ouvrir un lien vers un espace du disque
+    - soit en lecture
+    - soit en écriture
+- faire une opération
+- fermer ce lien
+
+Plusieurs manières
+
+---
+
+## Lire un fichier
+
+Si le fichier est à l'endroit `dossier.fichier.txt`, le mode lecture est `r` :
+
+``` {.python}
+
+f = open("dossier.fichier.txt","r")
+contenu = f.read()
+f.close()
+
+```
+
+Ou avec un bloc qui gère la fermeture
+
+``` {.python}
+
+with open("dossier.fichier.txt","r") as f
+    contenu = f.read()
+
+```
+
+## Écrire
+
+Similaire, mais avec l'option `r`, et les méthodes `read`
+
+
+# Les fonctions
+
+## Deux types de fonctions
+
+**fonctions**: un morceau de code qui prend des entrées, et produit des sorties, auquel on donne un nom pour pouvoir l'utiliser sans recopier tout le code
+
+- Celles déjà disponibles (écrites par d'autres)
+- Celles que l'on écrit
+
+Des fonctions déjà rencontrées : `print`, `len`, `range`, ...
+
+---
+
+## Définir une fonction
+
+- Donner un nom
+- Définir ce qui doit être en entrée
+- Écrire les étapes permettant de passer de l'entrée à la sortie
+- Dire ce qu'elle doit renvoyer
+
+```{.python}
+def NOM_FONCTION(ENTREE1, ENTREE2):
+    OPERATION 1
+    OPERATION 2
+    return RETOUR
+```
+
+Puis pour l'appeler : `NOM_FONCTION(E1, E2)`
+
+---
+
+## Pourquoi écrire une fonction
+
+- Pour ne pas répéter le code
+- Pour monter en abstraction
+- Pour aller vers la modularité des opérations
+- Pour faciliter la lecture
+
+
+<!--
+LEs notions de bases de test avec assert ?
+méthodes de classe, et les __)
+aller vers l'orienté objet
+toute fonctionnalité non testée comporte un bug
+-->
