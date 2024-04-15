@@ -40,8 +40,8 @@ Le script est sur le dépôt.
 - L'exécuter :
     - Ligne par ligne dans l'interpréteur
     - Comme un fichier avec `python script.py`
-    - En le copiant dans un notebooks
-        - Soit local
+    - En le copiant dans un notebook
+        - Soit en local
         - Soit en service en ligne
 
 ---
@@ -62,7 +62,7 @@ Le script est sur le dépôt.
 
 - Des contraintes de syntaxe fortes sinon ça ne marche pas
 - Des règles de qualité pour écrire du code
-    - PEP8 pour Python https://peps.python.org/pep-0008/
+    - [PEP8 pour Python](https://peps.python.org/pep-0008/)
 - L'importance est souvent d'abord d'écrire
 
 ---
@@ -101,7 +101,7 @@ sortie_fichier = True
 ```
 
 - Création d'une nouvelle entité `sortie_fichier`
-- Attribution d'un contenu `true`
+- Attribution d'un contenu `True`
 - Variable avec un type : typage dynamique
 
 ---
@@ -136,7 +136,7 @@ Supprimer une variable : `del variable`
 
 - Pas d'espaces dans les noms
 - Mais entre les termes : pas de souci
-- Dans beaucoup de situation, pas de souci pour sauter une ligne (après une virgule)
+- Dans beaucoup de situations, pas de souci pour sauter une ligne (après une virgule)
 - Si besoin de sauter à la ligne, échapper l'espace avec `\`
 
 ---
@@ -175,7 +175,7 @@ Les erreurs sont importantes
 - Lire la fin du message d'erreur pour comprendre
 - Remonter la trace si nécessaire
 
-
+![](img/error.png){style="display:block; margin:auto;"}
 
 ---
 
@@ -268,7 +268,7 @@ Un type spécifique, la valeur nulle `None`
 
 ## Les blocs des scripts
 
-- Un script est un écoulement d'instruction
+- Un script est un écoulement d'instructions
     - Exécutées les unes après les autres
 - Cet écoulement est organisé par des blocs de flux :
     - Conditions
@@ -399,7 +399,7 @@ Fonction `range` qui permet de générer un ensemble d'entiers
 
 ---
 
-## Complétion de liste
+## Compréhension de liste
 
 Possible de condenser une boucle :
 
@@ -411,7 +411,7 @@ Possible de condenser une boucle :
 
 ## Ligne 11/12 : tester une condition à chaque élément
 
-Pour chaque élément de `liste_mots`, la condition teste si sa longueur est supérieur à la valeur de la variable `nombre_min_lettres`
+Pour chaque élément de `liste_mots`, la condition teste si sa longueur est supérieure à la valeur de la variable `nombre_min_lettres`
 
 Et si c'est le cas, augmente la variable compteur de 1
 
@@ -421,6 +421,7 @@ Et si c'est le cas, augmente la variable compteur de 1
 
 
 La forme :
+
 - compteur à 0
 - boucle sur un ensemble
 - addition de 1 sur une condition
@@ -446,23 +447,24 @@ Les structures de comptages sont conceptualisées dans le cadre de l'algorithmiq
 ```
 
 - rassembler les informations
-- dictionnaire bon conteneurs
+- dictionnaire bon conteneur
     - penser au format JSON : dictionnaires, listes, valeurs
 
 ---
 
-## Ligne 15 : formattage de chaîne de caractères
+## Ligne 15 : formattage de chaînes de caractères
 
 Mettre en forme du texte est fréquent : on parle de formattage
 
 Différentes manières suivant les versions de Python (si variable est de type texte)
+
 - concaténer `"un" + variable`
 - utiliser des token : `"un %d" % variable``
 - utiliser les f-strings : `f"un {var}"`
 
 ---
 
-## lecture/écriture de texte/binaire dans un fichier
+## Lecture/écriture de texte/binaire dans un fichier
 
 Fichier est stocké sur le disque dur et non pas dans la mémoire vive :
 
@@ -506,7 +508,7 @@ Similaire, mais avec l'option `r`, et les méthodes `read`
 
 ## Deux types de fonctions
 
-**fonctions**: un morceau de code qui prend des entrées, et produit des sorties, auquel on donne un nom pour pouvoir l'utiliser sans recopier tout le code
+**fonctions :** un morceau de code qui prend des entrées, et produit des sorties, auquel on donne un nom pour pouvoir l'utiliser sans recopier tout le code
 
 - Celles déjà disponibles (écrites par d'autres)
 - Celles que l'on écrit
