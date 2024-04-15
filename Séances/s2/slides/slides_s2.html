@@ -8,7 +8,7 @@
 <link href="slides_s2_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="slides_s2_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="slides_s2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.552">
+  <meta name="generator" content="quarto-1.4.551">
 
   <meta name="author" content="Émilien Schultz - Léo Mignot">
   <meta name="dcterms.date" content="2024-04-15">
@@ -444,9 +444,9 @@
 <ul>
 <li>Ligne par ligne dans l’interpréteur</li>
 <li>Comme un fichier avec <code>python script.py</code></li>
-<li>En le copiant dans un notebooks
+<li>En le copiant dans un notebook
 <ul>
-<li>Soit local</li>
+<li>Soit en local</li>
 <li>Soit en service en ligne</li>
 </ul></li>
 </ul></li>
@@ -472,7 +472,7 @@
 <li>Des contraintes de syntaxe fortes sinon ça ne marche pas</li>
 <li>Des règles de qualité pour écrire du code
 <ul>
-<li>PEP8 pour Python https://peps.python.org/pep-0008/</li>
+<li><a href="https://peps.python.org/pep-0008/">PEP8 pour Python</a></li>
 </ul></li>
 <li>L’importance est souvent d’abord d’écrire</li>
 </ul>
@@ -505,7 +505,7 @@
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="" aria-hidden="true" tabindex="-1"></a>sortie_fichier <span class="op">=</span> <span class="va">True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>Création d’une nouvelle entité <code>sortie_fichier</code></li>
-<li>Attribution d’un contenu <code>true</code></li>
+<li>Attribution d’un contenu <code>True</code></li>
 <li>Variable avec un type : typage dynamique</li>
 </ul>
 </section>
@@ -543,14 +543,14 @@
 <ul>
 <li>Pas d’espaces dans les noms</li>
 <li>Mais entre les termes : pas de souci</li>
-<li>Dans beaucoup de situation, pas de souci pour sauter une ligne (après une virgule)</li>
+<li>Dans beaucoup de situations, pas de souci pour sauter une ligne (après une virgule)</li>
 <li>Si besoin de sauter à la ligne, échapper l’espace avec <code>\</code></li>
 </ul>
 </section>
 <section id="ligne-2-variable-encore" class="slide level2">
 <h2>Ligne 2 : variable encore</h2>
 <p>Un autre type</p>
-<div id="701604a2" class="cell" data-execution_count="1">
+<div id="c8f20f65" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a>nombre_min_lettres <span class="op">=</span> <span class="dv">4</span></span>
 <span id="cb3-2"><a href=""></a><span class="bu">type</span>(nombre_min_lettres)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
@@ -558,14 +558,14 @@
 </div>
 </div>
 <p>Comme c’est un entier, il est possible de manipuler cette variable comme un nombre</p>
-<div id="8d73beca" class="cell" data-execution_count="2">
+<div id="ccf5a1a0" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a>nombre_min_lettres <span class="op">+</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>14</code></pre>
 </div>
 </div>
 <p>Attention, le nom est important</p>
-<div id="67513ac1" class="cell" data-execution_count="3">
+<div id="b5e6afdb" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href=""></a>Nombre_min_lettres</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>NameError: name 'Nombre_min_lettres' is not defined</code></pre>
@@ -583,7 +583,8 @@
 <li>Lire la fin du message d’erreur pour comprendre</li>
 <li>Remonter la trace si nécessaire</li>
 </ul>
-</section>
+
+<img data-src="img/error.png" style="display:block; margin:auto;" class="r-stretch"></section>
 <section id="ligne-3-une-entrée" class="slide level2">
 <h2>Ligne 3 : une entrée</h2>
 <div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href=""></a>phrase <span class="op">=</span> <span class="bu">input</span>(<span class="st">"Écrivez une phrase: "</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -605,7 +606,7 @@
 </ul></li>
 <li>Types et opérations :</li>
 </ul>
-<div id="f283b32b" class="cell" data-execution_count="4">
+<div id="05685895" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href=""></a><span class="co">"dix"</span>  <span class="op">+</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>TypeError: can only concatenate str (not "int") to str</code></pre>
@@ -680,7 +681,7 @@
 <section id="les-blocs-des-scripts" class="slide level2">
 <h2>Les blocs des scripts</h2>
 <ul>
-<li>Un script est un écoulement d’instruction
+<li>Un script est un écoulement d’instructions
 <ul>
 <li>Exécutées les unes après les autres</li>
 </ul></li>
@@ -768,7 +769,7 @@
 <span id="cb15-2"><a href=""></a><span class="cf">for</span> VARIABLE_TEMPORAIRE <span class="kw">in</span> ENSEMBLE:</span>
 <span id="cb15-3"><a href=""></a>    CODE avec VARIABLE_TEMPORAIRE</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Chaque élément de <code>liste_mots</code> est pris</p>
-<div id="85be988e" class="cell" data-execution_count="5">
+<div id="0747f823" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href=""></a><span class="cf">for</span> element <span class="kw">in</span> [<span class="st">"ceci"</span>, <span class="st">"est"</span>, <span class="dv">1</span>, <span class="st">"mot"</span>]:</span>
 <span id="cb16-2"><a href=""></a>    <span class="bu">print</span>(element)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -781,7 +782,7 @@ mot</code></pre>
 </section>
 <section id="tout-peut-être-itéré" class="slide level2">
 <h2>Tout peut être itéré</h2>
-<div id="61113251" class="cell" data-execution_count="6">
+<div id="4a92a76d" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href=""></a><span class="cf">for</span> lettre <span class="kw">in</span> <span class="st">"Un texte"</span>:</span>
 <span id="cb18-2"><a href=""></a>    <span class="bu">print</span>(lettre)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -796,7 +797,7 @@ e</code></pre>
 </div>
 </div>
 <p>Et des formes plus compliquées</p>
-<div id="e778fc50" class="cell" data-execution_count="7">
+<div id="92614224" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href=""></a><span class="cf">for</span> rang, lettre <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="st">"Un texte"</span>):</span>
 <span id="cb20-2"><a href=""></a>    <span class="bu">print</span>(rang, lettre)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -818,10 +819,10 @@ e</code></pre>
 <li><code>range(0, 10)</code> : entiers entre 0 et 10</li>
 </ul>
 </section>
-<section id="complétion-de-liste" class="slide level2">
-<h2>Complétion de liste</h2>
+<section id="compréhension-de-liste" class="slide level2">
+<h2>Compréhension de liste</h2>
 <p>Possible de condenser une boucle :</p>
-<div id="7e8834d9" class="cell" data-execution_count="8">
+<div id="d784febc" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href=""></a>[i<span class="op">+</span><span class="dv">10</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">10</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]</code></pre>
@@ -830,12 +831,17 @@ e</code></pre>
 </section>
 <section id="ligne-1112-tester-une-condition-à-chaque-élément" class="slide level2">
 <h2>Ligne 11/12 : tester une condition à chaque élément</h2>
-<p>Pour chaque élément de <code>liste_mots</code>, la condition teste si sa longueur est supérieur à la valeur de la variable <code>nombre_min_lettres</code></p>
+<p>Pour chaque élément de <code>liste_mots</code>, la condition teste si sa longueur est supérieure à la valeur de la variable <code>nombre_min_lettres</code></p>
 <p>Et si c’est le cas, augmente la variable compteur de 1</p>
 </section>
 <section id="les-structures-algorithmiques" class="slide level2">
 <h2>Les structures algorithmiques</h2>
-<p>La forme : - compteur à 0 - boucle sur un ensemble - addition de 1 sur une condition</p>
+<p>La forme :</p>
+<ul>
+<li>compteur à 0</li>
+<li>boucle sur un ensemble</li>
+<li>addition de 1 sur une condition</li>
+</ul>
 <p>Constitue une structure de comptage.</p>
 <p>Les structures de comptages sont conceptualisées dans le cadre de l’algorithmique.</p>
 </section>
@@ -852,19 +858,24 @@ e</code></pre>
 <span id="cb24-2"><a href=""></a>                   <span class="st">"Phrase"</span>:phrase,<span class="st">"Seuil"</span>:nombre_min_lettres}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li>rassembler les informations</li>
-<li>dictionnaire bon conteneurs
+<li>dictionnaire bon conteneur
 <ul>
 <li>penser au format JSON : dictionnaires, listes, valeurs</li>
 </ul></li>
 </ul>
 </section>
-<section id="ligne-15-formattage-de-chaîne-de-caractères" class="slide level2">
-<h2>Ligne 15 : formattage de chaîne de caractères</h2>
+<section id="ligne-15-formattage-de-chaînes-de-caractères" class="slide level2">
+<h2>Ligne 15 : formattage de chaînes de caractères</h2>
 <p>Mettre en forme du texte est fréquent : on parle de formattage</p>
-<p>Différentes manières suivant les versions de Python (si variable est de type texte) - concaténer <code>"un" + variable</code> - utiliser des token : <code>"un %d" % variable`` - utiliser les f-strings :</code>f”un {var}“`</p>
+<p>Différentes manières suivant les versions de Python (si variable est de type texte)</p>
+<ul>
+<li>concaténer <code>"un" + variable</code></li>
+<li>utiliser des token : `“un %d” % variable``</li>
+<li>utiliser les f-strings : <code>f"un {var}"</code></li>
+</ul>
 </section>
 <section id="lectureécriture-de-textebinaire-dans-un-fichier" class="slide level2">
-<h2>lecture/écriture de texte/binaire dans un fichier</h2>
+<h2>Lecture/écriture de texte/binaire dans un fichier</h2>
 <p>Fichier est stocké sur le disque dur et non pas dans la mémoire vive :</p>
 <ul>
 <li>ouvrir un lien vers un espace du disque
@@ -900,7 +911,7 @@ e</code></pre>
 </section>
 <section id="deux-types-de-fonctions" class="slide level2">
 <h2>Deux types de fonctions</h2>
-<p><strong>fonctions</strong>: un morceau de code qui prend des entrées, et produit des sorties, auquel on donne un nom pour pouvoir l’utiliser sans recopier tout le code</p>
+<p><strong>fonctions :</strong> un morceau de code qui prend des entrées, et produit des sorties, auquel on donne un nom pour pouvoir l’utiliser sans recopier tout le code</p>
 <ul>
 <li>Celles déjà disponibles (écrites par d’autres)</li>
 <li>Celles que l’on écrit</li>
