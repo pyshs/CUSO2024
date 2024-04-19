@@ -1,0 +1,414 @@
+---
+title: "Python pour les SHS"
+subtitle: "Séance 3 : Au-delà du module standard"
+author: "Émilien Schultz - Léo Mignot"
+date: 2024-04-22
+format: 
+    revealjs:
+        slideNumber: true
+---
+
+## Où en sommes-nous ?
+
+![](img/etatavancement.jpg){fig-align="center"}
+
+Mais pas de panique : il n'est pas nécessaire de tout savoir pour programmer :)
+
+---
+
+## Petit récapitulatif des notions
+
+- Principal objectif : **lire un script**
+- Les étapes d'exécution / les blocs
+- La création de variables/objets
+- Les entrées sorties
+
+Il existe beaucoup de [cheatsheet](https://www.pythoncheatsheet.org/cheatsheet/basics) avec les notions qui vous permettent d'avoir une idée de l'étendue du langage
+
+---
+
+## Python : des objets partout
+
+![](img/primitive.jpeg){fig-align="center"}
+
+---
+
+
+
+## Aujourd'hui
+
+- Les fonctions
+- Les bibliothèques
+- Collecter des données
+- Parler de vos données
+
+---
+
+## Correction des exercices
+
+- Important de faire des erreurs
+
+---
+
+## Comment réduire son code ?
+
+- Des stratégies pour avoir du code plus compact
+    - Exemple de la compréhension de liste
+- Le décomposer en blocs faciles à lire
+- Créer des fonctions
+
+---
+
+## Les fonctions
+
+Une fonction est une séquence de code (une série d'opérations) entre des entrées et des sorties auquel on donne un nom.
+
+- On déclare une fonction
+    - Ses arguments d'entrée
+    - Ce qu'elle renvoie
+    - Son nom
+- On l'exécute ensuite
+
+---
+
+## Fonctions de base de Python
+
+- print
+- input
+- type
+- len
+- range
+- max
+- sorted
+- list
+- ...
+
+## Possibilité de définir ses propres fonctions
+
+Opérateur `def` et `return`
+
+```{.python}
+def nom_de_la_fonction(entrée1, entrée2, ...):
+    opération 1
+    opération 2
+    return sortie
+```
+
+Une fois définie, il est possible d'utiliser cette fonction
+
+
+```{.python}
+nom_de_la_fonction(val1, val2)
+```
+
+## Mettre en fonction le script
+
+- Entrée un texte et le seuil de lettre
+- Renvoyer à la sortie le dictionnaire d'information
+
+## Langage, module et bibliothèques
+
+![](img/standard.png)
+
+[Bibliothèque standard](https://docs.python.org/fr/3/library/index.html)
+
+## Module de la librairie standard
+
+- os
+- math
+- time
+- ...
+
+Importation directe
+
+```{.python}
+import math
+```
+
+## Exemples
+
+Obtenir le temps actuel
+
+```{python}
+#| echo: true
+import time
+time.time()
+```
+
+Calculer une racine carrée
+
+```{python}
+#| echo: true
+import math
+math.sqrt(100)
+```
+
+Prendre toutes les paires d'un ensemble
+
+```{python}
+#| echo: true
+import itertools
+ensemble = "abcd"
+for i in itertools.combinations(ensemble, 2):
+    print(i)
+```
+
+---
+
+## Au-delà, codes Python non-standard
+
+Un vaste ensemble de contenus
+
+![](img/universe.jpeg){fig-align="center"}
+
+---
+
+## Du module à la bibliothèque
+
+- Module : un fichier .py qui contient le code
+- Package : une collection de module dans un dossier
+- Bibliothèque : un ensemble interdépendant de code 
+
+Pour complexifier, ces éléments peuvent se retrouver à plusieurs endroits ...
+
+---
+
+###
+
+![](img/packagesmodules.png){fig-align="center"}
+
+
+---
+
+## Intermède
+
+Créons notre module Python avec la fonction créée au début de la séance
+
+Cela permet de rendre notre code plus modulaire.
+
+---
+
+## Bibliothèques publiées
+
+Un dépôt centralisé et un outil `pip` pour installer facilement
+
+![](img/pypi.png){fig-align="center"}
+
+---
+
+## Commentaires
+
+- tous les codes ne sont pas publiés 
+- `pip` installe les dépendances déclarées
+- la publication d'une bibliothèque nécessite de recourir à des outils
+    - poetry, flit, etc.
+
+---
+
+## La situation
+
+- De nombreux codes
+- Une partie publiée mais sans vérification
+    - Anciens
+    - Buggés
+
+Se repérer dans cette jungle ...
+
+---
+
+## SciPy : quelques bibliothèques intégrées
+
+![](img/python-stack.png){fig-align="center"}
+
+Chaque bibliotèque a son histoire...
+
+
+---
+
+## Numpy : l'infrastructure numérique
+
+![](img/numpy.png){fig-align="center"}
+
+
+---
+
+## Matplotlib : l'infrastructure graphique
+
+![](img/matplotlib.png){fig-align="center"}
+
+
+---
+
+## SciPy : boîte à outils du computationnel scientifique
+
+![](img/scipy.png){fig-align="center"}
+
+
+---
+
+## Pandas : statistiques dans les tableaux
+
+![](img/pandas.png){fig-align="center"}
+
+
+---
+
+## Seaborn : visualisations scientifiques avancées
+
+![](img/seaborn.png){fig-align="center"}
+
+
+---
+
+## Scikit-learn : tout le machine learning
+
+![](img/sklearn.png){fig-align="center"}
+
+
+---
+
+## SpaCy : NLP facile
+
+![](img/spacy.png){fig-align="center"}
+
+
+---
+
+## Streamlit : Construire des applications
+
+![](img/streamlit.png){fig-align="center"}
+
+
+---
+
+## Et bien d'autres :
+
+- BeautifulSoup pour traiter des données html
+- Dask pour le calcul Big Data
+- Plotly pour des figures interactives
+- Networkx pour l'analyse de réseau
+- ...
+
+---
+
+## Démarche quand on a une question
+
+- Identifier la bibliothèque pertinente - attention, les choses peuvent changer
+- Lire la documentation / installer
+- Tester sur un petit exemple
+- Intégrer les fonctions dont on a besoin
+- Éventuellement : développer de la virtuosité
+
+---
+
+## En synthèse
+
+1. Développer des compétences sur des bibliothèques stables 
+2. ... son sens de l’orientation dans l’open source
+3. ... regarder régulièrement ce qui se fait.
+
+Et surtout : lire la documentation et les exemples !
+
+---
+
+## En pratique
+
+On veut récupérer une page wikipédia de notre discipline scientifique pour savoir si on parle de notre objet.
+
+**Comment faire ?**
+
+---
+
+## Etape 0 : traduire l'opération
+
+Programmer c’est décomposer en étapes
+
+- une page web s'obtient par une requête URL 
+- veut donc :
+    - avoir une url
+    - faire la requête
+    - récupérer le contenu
+    - regarder si notre contenu est dedans
+
+---
+
+## Solution 1 : le module standard
+
+Module urllib.request, avec sa [documentation](https://docs.python.org/3/library/urllib.request.html#module-urllib.request)
+
+```python
+from urllib.request import urlopen
+url = "https://fr.wikipedia.org/wiki/Sociologie"
+with urlopen(url) as response:
+    body = response.read()
+```
+
+Rien besoin d'installer, mais pas une interface très facile à prendre en main.
+
+---
+
+## Solution 2 : une bibliothèque
+
+![](img/requests.png)
+
+--- 
+
+## Installation et tentatives
+
+Pour installer une bibliothèque, une ligne de commande
+
+`pip install NOM`
+
+- Dernière version compatible
+- Installe aussi les dépendances
+- Possibilité de préciser la version à installer
+
+---
+
+## Application
+
+Dans un notebook
+
+- installer requests
+- lire la documentation
+- récupérer une page
+- voir le type des objets manipulés
+- regarder le contenu récupéré
+- comment tester la présence d'élément dans la page
+
+---
+
+## Chemins & fichiers
+
+- Important de se repérer sur l'ordinateur
+- Le dossier courant est `.`
+- Travailler en ligne de commande
+- Possibilité d'utiliser le module os pour créer des dossiers
+- Module `pathlib` pour manipuler des objets `Path`
+
+---
+
+## D'autres bibliothèques
+
+Pour manipuler Wikipédia, il est possible que d'autres bibliothèques existent
+
+- faire une recherche
+- tester pour voir si c'est plus simple
+
+# Parler de vos données
+
+## Préparation dernière séance
+
+Séance 6 consacrée aux usages
+
+- des présentations de nos usages (Léo & Émilien)
+- vous accompagner sur un traitement
+
+Qui aurait envie / des données
+
+
+<!--
+
+- fichier, module, package, bibliothèque...
+- raise / assert / erreurs
+-->
