@@ -8,7 +8,7 @@
 <link href="slides_s2_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="slides_s2_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="slides_s2_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.551">
+  <meta name="generator" content="quarto-1.4.552">
 
   <meta name="author" content="Émilien Schultz - Léo Mignot">
   <meta name="dcterms.date" content="2024-04-15">
@@ -551,22 +551,22 @@
 <section id="ligne-2-variable-encore" class="slide level2">
 <h2>Ligne 2 : variable encore</h2>
 <p>Un autre type</p>
-<div id="1339dec7" class="cell" data-execution_count="1">
+<div id="7a0e0d09" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href=""></a>nombre_min_lettres <span class="op">=</span> <span class="dv">4</span></span>
 <span id="cb3-2"><a href=""></a><span class="bu">type</span>(nombre_min_lettres)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="137">
+<div class="cell-output cell-output-display" data-execution_count="1">
 <pre><code>int</code></pre>
 </div>
 </div>
 <p>Comme c’est un entier, il est possible de manipuler cette variable comme un nombre</p>
-<div id="01581687" class="cell" data-execution_count="2">
+<div id="518fbce2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href=""></a>nombre_min_lettres <span class="op">+</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="138">
+<div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>14</code></pre>
 </div>
 </div>
 <p>Attention, le nom est important</p>
-<div id="b3b2103b" class="cell" data-execution_count="3">
+<div id="49d555a5" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href=""></a>Nombre_min_lettres</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>NameError: name 'Nombre_min_lettres' is not defined</code></pre>
@@ -607,7 +607,7 @@
 </ul></li>
 <li>Types et opérations :</li>
 </ul>
-<div id="4d23c14a" class="cell" data-execution_count="4">
+<div id="567e6c79" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href=""></a><span class="co">"dix"</span>  <span class="op">+</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
 <pre><code>TypeError: can only concatenate str (not "int") to str</code></pre>
@@ -770,7 +770,7 @@
 <span id="cb15-2"><a href=""></a><span class="cf">for</span> VARIABLE_TEMPORAIRE <span class="kw">in</span> ENSEMBLE:</span>
 <span id="cb15-3"><a href=""></a>    CODE avec VARIABLE_TEMPORAIRE</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Chaque élément de <code>liste_mots</code> est pris</p>
-<div id="16680ff2" class="cell" data-execution_count="5">
+<div id="14c13272" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href=""></a><span class="cf">for</span> element <span class="kw">in</span> [<span class="st">"ceci"</span>, <span class="st">"est"</span>, <span class="dv">1</span>, <span class="st">"mot"</span>]:</span>
 <span id="cb16-2"><a href=""></a>    <span class="bu">print</span>(element)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -783,7 +783,7 @@ mot</code></pre>
 </section>
 <section id="tout-peut-être-itéré" class="slide level2">
 <h2>Tout peut être itéré</h2>
-<div id="5fcbca5b" class="cell" data-execution_count="6">
+<div id="979b0bb0" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href=""></a><span class="cf">for</span> lettre <span class="kw">in</span> <span class="st">"Un texte"</span>:</span>
 <span id="cb18-2"><a href=""></a>    <span class="bu">print</span>(lettre)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -798,7 +798,7 @@ e</code></pre>
 </div>
 </div>
 <p>Et des formes plus compliquées</p>
-<div id="453d6717" class="cell" data-execution_count="7">
+<div id="1ade4ccb" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href=""></a><span class="cf">for</span> rang, lettre <span class="kw">in</span> <span class="bu">enumerate</span>(<span class="st">"Un texte"</span>):</span>
 <span id="cb20-2"><a href=""></a>    <span class="bu">print</span>(rang, lettre)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -823,9 +823,9 @@ e</code></pre>
 <section id="compréhension-de-liste" class="slide level2">
 <h2>Compréhension de liste</h2>
 <p>Possible de condenser une boucle :</p>
-<div id="462d8519" class="cell" data-execution_count="8">
+<div id="be3df921" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href=""></a>[i<span class="op">+</span><span class="dv">10</span> <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">10</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="144">
+<div class="cell-output cell-output-display" data-execution_count="8">
 <pre><code>[10, 11, 12, 13, 14, 15, 16, 17, 18, 19]</code></pre>
 </div>
 </div>

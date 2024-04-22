@@ -3,9 +3,9 @@ title: "Python pour les SHS"
 subtitle: "Séance 3 : Au-delà du module standard"
 author: "Émilien Schultz - Léo Mignot"
 date: 2024-04-22
-format: 
-    revealjs:
-        slideNumber: true
+format: pptx
+#    revealjs:
+#        slideNumber: true
 ---
 
 ## Où en sommes-nous ?
@@ -98,6 +98,9 @@ Opérateur `def` et `return`
 
 ```{.python}
 def nom_de_la_fonction(entrée1, entrée2, ...):
+    """
+    DOCSTRING
+    """
     opération 1
     opération 2
     return sortie
@@ -116,6 +119,7 @@ Une fonction est aussi un objet ...
 
 
 - Entrée un texte et le seuil de lettre
+- Ecrire une docstring
 - Renvoyer à la sortie le dictionnaire d'information
 
 # Au-delà du langage

@@ -3,9 +3,10 @@ title: "Python pour les SHS"
 subtitle: "Séance 1 - Pourquoi programmer en Python ?"
 author: "Émilien Schultz - Léo Mignot"
 date: 2024-04-08
-format: 
-    revealjs:
-        slideNumber: true
+format: pptx
+#format: 
+#    revealjs:
+#        slideNumber: true
         #embed-resources: true
 
 
@@ -152,7 +153,6 @@ Abstractions permettant d'écrire des instructions
     - Compilation (logiciel)
     - Interprétation
 ---
-
 
 ## Parenthèse : plus ou moins de familiarité à la programmation
 

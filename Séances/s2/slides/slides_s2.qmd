@@ -5,10 +5,11 @@ execute:
 subtitle: "Séance 2 : autopsie d'un script"
 author: "Émilien Schultz - Léo Mignot"
 date: 2024-04-15
-format: 
-    revealjs:
-        slideNumber: true
-        scrollable: true # voir si le rendu est ok
+format: pptx
+#format: 
+#    revealjs:
+#        slideNumber: true
+#        scrollable: true # voir si le rendu est ok
 ---
 
 

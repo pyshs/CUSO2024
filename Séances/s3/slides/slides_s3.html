@@ -488,9 +488,12 @@
 <h2>Possibilité de définir ses propres fonctions</h2>
 <p>Opérateur <code>def</code> et <code>return</code></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="kw">def</span> nom_de_la_fonction(entrée1, entrée2, ...):</span>
-<span id="cb1-2"><a href=""></a>    opération <span class="dv">1</span></span>
-<span id="cb1-3"><a href=""></a>    opération <span class="dv">2</span></span>
-<span id="cb1-4"><a href=""></a>    <span class="cf">return</span> sortie</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a href=""></a>    <span class="co">"""</span></span>
+<span id="cb1-3"><a href=""></a><span class="co">    DOCSTRING</span></span>
+<span id="cb1-4"><a href=""></a><span class="co">    """</span></span>
+<span id="cb1-5"><a href=""></a>    opération <span class="dv">1</span></span>
+<span id="cb1-6"><a href=""></a>    opération <span class="dv">2</span></span>
+<span id="cb1-7"><a href=""></a>    <span class="cf">return</span> sortie</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Une fois définie, il est possible d’utiliser cette fonction</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a>nom_de_la_fonction(val1, val2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Une fonction est aussi un objet …</p>
@@ -499,6 +502,7 @@
 <h2>Application : mettre en fonction le script de la séance 2</h2>
 <ul>
 <li>Entrée un texte et le seuil de lettre</li>
+<li>Ecrire une docstring</li>
 <li>Renvoyer à la sortie le dictionnaire d’information</li>
 </ul>
 </section>
@@ -526,15 +530,15 @@
 <section id="exemples" class="slide level2">
 <h2>Exemples</h2>
 <p>Obtenir le temps actuel</p>
-<div id="1f3989f9" class="cell" data-execution_count="1">
+<div id="8db9f570" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a><span class="im">import</span> time</span>
 <span id="cb4-2"><a href=""></a>time.time()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>1713770572.720619</code></pre>
+<pre><code>1713807182.183745</code></pre>
 </div>
 </div>
 <p>Calculer une racine carrée</p>
-<div id="da14c99b" class="cell" data-execution_count="2">
+<div id="8736f7d2" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="im">import</span> math</span>
 <span id="cb6-2"><a href=""></a>math.sqrt(<span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
@@ -542,7 +546,7 @@
 </div>
 </div>
 <p>Prendre toutes les paires d’un ensemble</p>
-<div id="2821dfd3" class="cell" data-execution_count="3">
+<div id="400f128d" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href=""></a><span class="im">import</span> itertools</span>
 <span id="cb8-2"><a href=""></a>ensemble <span class="op">=</span> <span class="st">"abcd"</span></span>
 <span id="cb8-3"><a href=""></a><span class="cf">for</span> i <span class="kw">in</span> itertools.combinations(ensemble, <span class="dv">2</span>):</span>
