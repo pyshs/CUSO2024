@@ -409,6 +409,17 @@ Dans un notebook
 
 ---
 
+
+## Gérer du html
+
+- Parser du HTML c'est pas évident
+- Le problème est courant
+- Il doit donc exister une bibliothèque
+- Jetons un coup d'oeil sur `BeautifulSoup`
+
+
+---
+
 ## D'autres bibliothèques
 
 Pour manipuler Wikipédia, il est possible que d'autres bibliothèques existent
