@@ -374,6 +374,15 @@ Rien besoin d'installer, mais pas une interface très facile à prendre en main.
 
 --- 
 
+## Importance de la documentation
+
+- Important de lire les documentations
+- Important d'écrire de la documentation
+
+**Python a une bonne documentation généralement**
+
+---
+
 ## Installation et tentatives
 
 Pour installer une bibliothèque, une ligne de commande
