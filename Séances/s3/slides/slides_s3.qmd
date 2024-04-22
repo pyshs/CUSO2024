@@ -23,11 +23,11 @@ Mais pas de panique : il n'est pas nécessaire de tout savoir pour programmer :)
 - La création de variables/objets
 - Les entrées sorties
 
-Il existe beaucoup de [cheatsheet](https://www.pythoncheatsheet.org/cheatsheet/basics) avec les notions qui vous permettent d'avoir une idée de l'étendue du langage
+Il existe beaucoup de [cheatsheet](https://www.pythoncheatsheet.org/cheatsheet/basics) avec les notions qui vous permettent d'avoir une idée de l'étendue du langage (jetez un coup d'oeil).
 
 ---
 
-## Python : des objets partout
+## Rappel important : des objets partout
 
 ![](img/primitive.jpeg){fig-align="center"}
 
@@ -36,6 +36,8 @@ Il existe beaucoup de [cheatsheet](https://www.pythoncheatsheet.org/cheatsheet/b
 
 
 ## Aujourd'hui
+
+Montée en abstraction
 
 - Les fonctions
 - Les bibliothèques
@@ -47,6 +49,11 @@ Il existe beaucoup de [cheatsheet](https://www.pythoncheatsheet.org/cheatsheet/b
 ## Correction des exercices
 
 - Important de faire des erreurs
+- Partir de la modification du code
+- Importance des itérations (aucun code n'est directement beau)
+- Important de la lisibilité du code
+
+*Existence de linter si besoin*
 
 ---
 
@@ -56,6 +63,8 @@ Il existe beaucoup de [cheatsheet](https://www.pythoncheatsheet.org/cheatsheet/b
     - Exemple de la compréhension de liste
 - Le décomposer en blocs faciles à lire
 - Créer des fonctions
+- Créer un module à part
+- Créer une bibliothèque ...
 
 ---
 
@@ -101,14 +110,19 @@ Une fois définie, il est possible d'utiliser cette fonction
 nom_de_la_fonction(val1, val2)
 ```
 
-## Mettre en fonction le script
+Une fonction est aussi un objet ...
+
+## Application : mettre en fonction le script de la séance 2
+
 
 - Entrée un texte et le seuil de lettre
 - Renvoyer à la sortie le dictionnaire d'information
 
+# Au-delà du langage
+
 ## Langage, module et bibliothèques
 
-![](img/standard.png)
+![](img/standard.png){fig-align="center" width="120%"}
 
 [Bibliothèque standard](https://docs.python.org/fr/3/library/index.html)
 
@@ -155,7 +169,7 @@ for i in itertools.combinations(ensemble, 2):
 
 ---
 
-## Au-delà, codes Python non-standard
+## Au-delà, codes Python non-standards
 
 Un vaste ensemble de contenus
 
@@ -165,11 +179,15 @@ Un vaste ensemble de contenus
 
 ## Du module à la bibliothèque
 
-- Module : un fichier .py qui contient le code
-- Package : une collection de module dans un dossier
-- Bibliothèque : un ensemble interdépendant de code 
+- **Module** : un fichier .py qui contient le code
+- **Package** : une collection de module dans un dossier
+- **Bibliothèque** : un ensemble interdépendant de code 
 
 Pour complexifier, ces éléments peuvent se retrouver à plusieurs endroits ...
+
+- Dépôt officiel
+- Page github
+- ...
 
 ---
 
@@ -183,6 +201,9 @@ Pour complexifier, ces éléments peuvent se retrouver à plusieurs endroits ...
 ## Intermède
 
 Créons notre module Python avec la fonction créée au début de la séance
+
+- Mettre la déclaration de la fonction dans un fichier `.py`
+- L'importer pour l'utiliser
 
 Cela permet de rendre notre code plus modulaire.
 

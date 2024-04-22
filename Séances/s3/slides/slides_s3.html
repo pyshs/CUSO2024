@@ -418,14 +418,15 @@
 <li>La création de variables/objets</li>
 <li>Les entrées sorties</li>
 </ul>
-<p>Il existe beaucoup de <a href="https://www.pythoncheatsheet.org/cheatsheet/basics">cheatsheet</a> avec les notions qui vous permettent d’avoir une idée de l’étendue du langage</p>
+<p>Il existe beaucoup de <a href="https://www.pythoncheatsheet.org/cheatsheet/basics">cheatsheet</a> avec les notions qui vous permettent d’avoir une idée de l’étendue du langage (jetez un coup d’oeil).</p>
 </section>
-<section id="python-des-objets-partout" class="slide level2">
-<h2>Python : des objets partout</h2>
+<section id="rappel-important-des-objets-partout" class="slide level2">
+<h2>Rappel important : des objets partout</h2>
 
 <img data-src="img/primitive.jpeg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="aujourdhui" class="slide level2">
 <h2>Aujourd’hui</h2>
+<p>Montée en abstraction</p>
 <ul>
 <li>Les fonctions</li>
 <li>Les bibliothèques</li>
@@ -437,7 +438,11 @@
 <h2>Correction des exercices</h2>
 <ul>
 <li>Important de faire des erreurs</li>
+<li>Partir de la modification du code</li>
+<li>Importance des itérations (aucun code n’est directement beau)</li>
+<li>Important de la lisibilité du code</li>
 </ul>
+<p><em>Existence de linter si besoin</em></p>
 </section>
 <section id="comment-réduire-son-code" class="slide level2">
 <h2>Comment réduire son code ?</h2>
@@ -448,6 +453,8 @@
 </ul></li>
 <li>Le décomposer en blocs faciles à lire</li>
 <li>Créer des fonctions</li>
+<li>Créer un module à part</li>
+<li>Créer une bibliothèque …</li>
 </ul>
 </section>
 <section id="les-fonctions" class="slide level2">
@@ -486,18 +493,24 @@
 <span id="cb1-4"><a href=""></a>    <span class="cf">return</span> sortie</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Une fois définie, il est possible d’utiliser cette fonction</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a>nom_de_la_fonction(val1, val2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Une fonction est aussi un objet …</p>
 </section>
-<section id="mettre-en-fonction-le-script" class="slide level2">
-<h2>Mettre en fonction le script</h2>
+<section id="application-mettre-en-fonction-le-script-de-la-séance-2" class="slide level2">
+<h2>Application : mettre en fonction le script de la séance 2</h2>
 <ul>
 <li>Entrée un texte et le seuil de lettre</li>
 <li>Renvoyer à la sortie le dictionnaire d’information</li>
 </ul>
 </section>
+<section>
+<section id="au-delà-du-langage" class="title-slide slide level1 center">
+<h1>Au-delà du langage</h1>
+
+</section>
 <section id="langage-module-et-bibliothèques" class="slide level2">
 <h2>Langage, module et bibliothèques</h2>
 
-<img data-src="img/standard.png" class="r-stretch"><p><a href="https://docs.python.org/fr/3/library/index.html">Bibliothèque standard</a></p>
+<img data-src="img/standard.png" class="quarto-figure quarto-figure-center r-stretch" style="width:120.0%"><p><a href="https://docs.python.org/fr/3/library/index.html">Bibliothèque standard</a></p>
 </section>
 <section id="module-de-la-librairie-standard" class="slide level2">
 <h2>Module de la librairie standard</h2>
@@ -513,23 +526,23 @@
 <section id="exemples" class="slide level2">
 <h2>Exemples</h2>
 <p>Obtenir le temps actuel</p>
-<div id="8f69d23f" class="cell" data-execution_count="1">
+<div id="359eef69" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a><span class="im">import</span> time</span>
 <span id="cb4-2"><a href=""></a>time.time()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="7">
-<pre><code>1713521195.246291</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="31">
+<pre><code>1713769062.200605</code></pre>
 </div>
 </div>
 <p>Calculer une racine carrée</p>
-<div id="2e905981" class="cell" data-execution_count="2">
+<div id="f131cba4" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="im">import</span> math</span>
 <span id="cb6-2"><a href=""></a>math.sqrt(<span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="8">
+<div class="cell-output cell-output-display" data-execution_count="32">
 <pre><code>10.0</code></pre>
 </div>
 </div>
 <p>Prendre toutes les paires d’un ensemble</p>
-<div id="fb8836ed" class="cell" data-execution_count="3">
+<div id="f194b528" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href=""></a><span class="im">import</span> itertools</span>
 <span id="cb8-2"><a href=""></a>ensemble <span class="op">=</span> <span class="st">"abcd"</span></span>
 <span id="cb8-3"><a href=""></a><span class="cf">for</span> i <span class="kw">in</span> itertools.combinations(ensemble, <span class="dv">2</span>):</span>
@@ -544,19 +557,24 @@
 </div>
 </div>
 </section>
-<section id="au-delà-codes-python-non-standard" class="slide level2">
-<h2>Au-delà, codes Python non-standard</h2>
+<section id="au-delà-codes-python-non-standards" class="slide level2">
+<h2>Au-delà, codes Python non-standards</h2>
 <p>Un vaste ensemble de contenus</p>
 
 <img data-src="img/universe.jpeg" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="du-module-à-la-bibliothèque" class="slide level2">
 <h2>Du module à la bibliothèque</h2>
 <ul>
-<li>Module : un fichier .py qui contient le code</li>
-<li>Package : une collection de module dans un dossier</li>
-<li>Bibliothèque : un ensemble interdépendant de code</li>
+<li><strong>Module</strong> : un fichier .py qui contient le code</li>
+<li><strong>Package</strong> : une collection de module dans un dossier</li>
+<li><strong>Bibliothèque</strong> : un ensemble interdépendant de code</li>
 </ul>
 <p>Pour complexifier, ces éléments peuvent se retrouver à plusieurs endroits …</p>
+<ul>
+<li>Dépôt officiel</li>
+<li>Page github</li>
+<li>…</li>
+</ul>
 </section>
 <section class="slide level2">
 
@@ -566,6 +584,10 @@
 <section id="intermède" class="slide level2">
 <h2>Intermède</h2>
 <p>Créons notre module Python avec la fonction créée au début de la séance</p>
+<ul>
+<li>Mettre la déclaration de la fonction dans un fichier <code>.py</code></li>
+<li>L’importer pour l’utiliser</li>
+</ul>
 <p>Cela permet de rendre notre code plus modulaire.</p>
 </section>
 <section id="bibliothèques-publiées" class="slide level2">
@@ -733,7 +755,7 @@
 <li>faire une recherche</li>
 <li>tester pour voir si c’est plus simple</li>
 </ul>
-</section>
+</section></section>
 <section>
 <section id="parler-de-vos-données" class="title-slide slide level1 center">
 <h1>Parler de vos données</h1>
