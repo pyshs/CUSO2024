@@ -1,0 +1,141 @@
+---
+title: "Python pour les SHS"
+subtitle: "Séance 4 : Tableaux et statistiques avec Pandas"
+author: "Émilien Schultz - Léo Mignot"
+date: 2024-04-22
+#format: pptx
+format:
+    revealjs:
+        slideNumber: true
+---
+
+## Où on est actuellement
+
+- bases du langage
+- structure d'un script
+- installer des bibliothèques
+    - lire la documentation
+
+Maintenant : aller vers des traitements "réels"
+
+- des bibliothèques puissantes
+- du Python pour lier les deux
+
+
+---
+
+## Aujourd'hui : les tableaux
+
+- Tableaux = base des statistiques
+- Une fois qu'on a un tableau bien propre
+    - Transformer
+    - Calculer
+    - Visualiser
+    - Exporter
+
+Avant : le domaine de la transformation des données peu/pas structurées
+
+---
+
+## La star : Pandas
+
+Une bibliothèque dédiée à la manipulation de données tabulaires (lignes/colonnes) + séries temporelles
+
+![](./img/statspandas.png){fig-align="center"}
+
+---
+
+## Transition douce d'Excel vers les bases de données
+
+![](./img/pandas.jpg){fig-align="center"}
+
+---
+
+## Quelques éléments
+
+- Facilite le traitement des données sous forme tableau
+- Usage comme base de données
+- Une grammaire compatible avec d'autres bibliothèques
+    - Montéee en taille avec Dask
+- Permet de faire facilement statistiques/visualisations exploratoires
+
+**Par contre sa propre philosophie**
+
+---
+
+## Introduction de nouveaux objets
+
+Le `DataFrame`
+
+![](./img/df.png){fig-align="center"}
+
+*Petite démo*
+
+---
+
+## Et une multitudes de possibilités
+
+[Une cheatsheet pour voir les possibilités](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+
+![](./img/pandascheatsheet.png){fig-align="center"}
+
+---
+
+
+## Au-delà de Pandas
+
+- Des bibliothèques qui reprennent la structure
+    - GeoPandas
+- Des traitement plus avancés/spécifiques
+    - Visualisations avec des bibliothèques dédiées
+    - Traitements (modèles)
+    - Big Data ...
+
+
+# Découverte des possibilités de Pandas
+
+## Différents types de manipulations
+
+Avec un jeu de données d'enquête par questionnaire existant
+
+- **Charger** des données
+- **Sélectionner** élément/ligne/colonne
+- **Filtrer** comme une base de donnée
+- **Calculer** avec les méthodes spécifiques
+- **Visualiser** les résultats
+
+
+# Avant les données structurées
+
+## Nettoyer des données de presse
+
+- Données dans `data/data.zip`
+    - Mention de `Suisse` dans la presse française nationale du mois précédent
+- A la base du HTML
+- Mis en forme en CSV
+- Que peut-on apprendre de ce jeu de données ?
+
+---
+
+## Traitements à réaliser
+
+- Distribution des journaux
+- Distribution des dates + visualisation
+- Compte de l'occurence du terme Suisse
+- Extraire juste les phrases concernées
+
+---
+
+
+## Tips : mieux comprendre la combinaison d'opérations
+
+[Voir les opérations](https://pandastutor.com/)
+
+![](./img/pandastutor.png){fig-align="center"}
+
+
+<!--
+
+- fichier, module, package, bibliothèque...
+- raise / assert / erreurs
+-->
