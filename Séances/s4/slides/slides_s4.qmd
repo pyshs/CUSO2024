@@ -2,7 +2,7 @@
 title: "Python pour les SHS"
 subtitle: "Séance 4 : Tableaux et statistiques avec Pandas"
 author: "Émilien Schultz - Léo Mignot"
-date: 2024-04-22
+date: 2024-04-29
 #format: pptx
 format:
     revealjs:
