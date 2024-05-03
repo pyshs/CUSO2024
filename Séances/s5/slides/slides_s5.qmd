@@ -1,0 +1,212 @@
+---
+title: "Python pour les SHS"
+subtitle: "Séance 5 : Statistiques et visualisations"
+author: "Émilien Schultz - Léo Mignot"
+date: 2024-05-05
+#format: pptx
+format:
+    revealjs:
+        slideNumber: true
+---
+
+## Où on est actuellement
+
+- Le langage
+- Les bibliothèques
+- Focus sur Pandas
+    - "Toutes" les manipulations de données tabulaires
+
+---
+
+## Tips : mieux comprendre la combinaison d'opérations
+
+Pandas tutor pour [voir les opérations](https://pandastutor.com/)
+
+![](./img/pandastutor.png){fig-align="center"}
+
+
+---
+
+## Aujourd'hui : faire des traitements plus avancées
+
+- Pandas très bien pour la mise en forme
+- Mais :
+    - Comment faire les statistiques habituelles (tableaux croisés, etc)
+    - Comment faire des analyses plus poussées ?
+    - Comment mettre correctement en forme un graphique ?
+---
+
+## Soyons honnête : plus laborieux que R
+
+Pas mal d'opérations vraiment **statistiques** sont plus laborieuses en Python qu'en R. 
+
+Pourquoi ?
+
+- Moins de communautés "statistiques"
+- Orientation plus "prédiction" que "description"
+
+
+# Statistiques
+
+## Les statistiques univariées
+
+- Les indicateurs sont facilement calculables avec Pandas
+- Les tri à plat sont faciles à faire aussi
+
+---
+
+## Les statistiques bivariées
+
+- Calculer une corrélation linéaire
+    - Pandas méthode `.corr`
+    - Scipy `scipy.stats.pearsonr`
+
+- Calculer une ANOVA
+    - Scipy `scipy.statsf_oneway`
+    - Pinguin ?
+
+- Faire un tableau croisé
+    - Pandas méthode `.crosstab`
+    - Test Scipy `scipy.stats.chi2_contingency`
+
+---
+
+## Manipuler des tableaux
+
+- Possibilité de construire ses tableaux
+- Puis les combiner
+- Exemple avec la méthode `Pandas.concat`
+- Manque encore quelques outils (exemple de `PySHS`)
+
+---
+
+## Statistiques avancées
+
+Une diversité de traitements spécialisés
+
+- Modélisation
+    - Régression linéaire, logistique, ...
+- Exploration
+    - ACP, ACM, ...
+- Classification
+    - KNN, ...
+
+Trouver la bonne bibliothèque pour faire le traitement
+
+---
+
+## Exemple de la régression logistique binomiale
+
+Rappel : une régression logistique est une modélisation sur d'une variable binaire où on régresse une fonction spécifique (la fonction logit) de la probabilité de la variable d'avoir les valeurz 1/0 comme une combinaison linéaire des variables inépendantes
+
+il faut donc :
+
+- une variable binaire
+- des variables indépendantes catégorielles ou continue
+- une fonction pour calculer les paramètres
+- Les mettre en forme
+
+---
+
+## Plusieurs solutions en Python
+
+- Sklearn : `sklearn.linear_model.LogisticRegression`
+- Statsmodel : `statsmodels.api.Logit`
+
+Regarder la documentation ; pas forcément parfaitement adapté à nos besoins.
+
+- Contruire ses propres outils
+
+
+# Visualisations
+
+## Matplotlib comme brique de base
+
+- Une "grammaire" graphique spécifique
+- Pas forcément "évidente"
+- Un équilibre à trouver entre :
+    - Rapidité (choix out of the box)
+    - Précision (contrôler tous les paramètres)
+---
+
+## Se repérer un peu
+
+![Nicolas Rougier, *Scientific Visualization: Python + Matplotlib*, p.19](./img/visualisation.png){fig-align="center"}
+
+
+---
+
+## Avoir une idée de ce qu'on peut faire
+
+Les galeries :
+
+- https://python-graph-gallery.com/
+- https://matplotlib.org/2.0.2/gallery.html
+
+Une ressource :
+
+- Nicolas Rougier, *Scientific Visualization: Python + Matplotlib*, https://inria.hal.science/hal-03427242
+
+Pratique de partir du code existant
+
+---
+
+## On peut aller loin
+
+- Disposition spatiale (juxtaposition, différents graphiques, tailles, couleurs, ...)
+- Les éléments à afficher (possible de mettre point par point des éléments)
+- Contrôler chaque élément (graduation, police, etc.)
+
+---
+
+![](./img/exemple.png){fig-align="center"}
+
+
+---
+
+## Structure de Matplotlib
+
+![](./img/anatomy.png){fig-align="center"}
+
+
+---
+
+##  Ça se complique :
+
+- Création d'une figure :
+    - explicitement
+    - implicitement (crée un contexte de figure)
+- Plusieurs manières "conventionnelles" d'usage
+- Beaucoup, beaucoup d'options ...
+
+---
+
+## Démarche pour une belle figure
+
+- Partir de l'objectif, pas de ce que vous savez faire
+- Itération
+- Décomposer les éléments, et progressivement agréger
+- Respecter des règles
+    - Générales de graphisme
+    - Spécifiques de la visualisation scientifique
+
+[Rougier NP, Droettboom M, Bourne PE (2014) Ten Simple Rules for Better Figures. PLoS Comput Biol 10(9): e1003833](https://doi.org/10.1371/journal.pcbi.1003833)
+
+
+---
+
+## Intégrer le javascript et l'interactivité
+
+D'autres solutions qui permettent de créer des visualisations interactives
+
+- portabilité vers des supports internet
+- d'autres grammaires
+
+---
+
+## Exemple de Plotly
+
+- Présenter Plotly
+- Dire un mot la philosophie de son usage
+- Refaire la série temporelle présentée en démo lors de la séance 1.
+
