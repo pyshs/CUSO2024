@@ -31,12 +31,12 @@ Pandas tutor pour [voir les opérations](https://pandastutor.com/)
 
 - Pandas très bien pour la mise en forme
 - Mais :
-    - Comment faire les statistiques habituelles (tableaux croisés, etc)
+    - Comment faire les statistiques habituelles (tableaux croisés, etc.)
     - Comment faire des analyses plus poussées ?
     - Comment mettre correctement en forme un graphique ?
 ---
 
-## Soyons honnête : plus laborieux que R
+## Soyons honnêtes : plus laborieux que R
 
 Pas mal d'opérations vraiment **statistiques** sont plus laborieuses en Python qu'en R. 
 
@@ -51,7 +51,7 @@ Pourquoi ?
 ## Les statistiques univariées
 
 - Les indicateurs sont facilement calculables avec Pandas
-- Les tri à plat sont faciles à faire aussi
+- Les tris à plat sont faciles à faire aussi
 
 ---
 
@@ -97,12 +97,12 @@ Trouver la bonne bibliothèque pour faire le traitement
 
 ## Exemple de la régression logistique binomiale
 
-Rappel : une régression logistique est une modélisation sur d'une variable binaire où on régresse une fonction spécifique (la fonction logit) de la probabilité de la variable d'avoir les valeurz 1/0 comme une combinaison linéaire des variables inépendantes
+Rappel : une régression logistique est une modélisation d'une variable binaire où on régresse une fonction spécifique (la fonction logit) de la probabilité de la variable d'avoir les valeurs 1/0 comme une combinaison linéaire des variables indépendantes
 
 il faut donc :
 
 - une variable binaire
-- des variables indépendantes catégorielles ou continue
+- des variables indépendantes catégorielles ou continues
 - une fonction pour calculer les paramètres
 - Les mettre en forme
 
