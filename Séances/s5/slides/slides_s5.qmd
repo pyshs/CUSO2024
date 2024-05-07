@@ -95,9 +95,9 @@ Trouver la bonne bibliothèque pour faire le traitement
 
 ---
 
-## Exemple de la régression logistique binomiale
+## Régression logistique binomiale
 
-Rappel : une régression logistique est une modélisation d'une variable binaire où on régresse une fonction spécifique (la fonction logit) de la probabilité de la variable d'avoir les valeurs 1/0 comme une combinaison linéaire des variables indépendantes
+Rappel : une régression logistique = modélisation d'une variable binaire où on régresse une fonction spécifique (la fonction logit) de la probabilité de la variable d'avoir les valeurs 1/0 comme une combinaison linéaire des variables indépendantes
 
 il faut donc :
 
