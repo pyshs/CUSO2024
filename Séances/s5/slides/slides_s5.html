@@ -8,7 +8,7 @@
 <link href="slides_s5_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="slides_s5_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="slides_s5_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.4.552">
+  <meta name="generator" content="quarto-1.4.551">
 
   <meta name="author" content="Émilien Schultz - Léo Mignot">
   <meta name="dcterms.date" content="2024-05-05">
@@ -546,9 +546,29 @@
 <section id="exemple-de-plotly" class="slide level2">
 <h2>Exemple de Plotly</h2>
 <ul>
-<li>Présenter Plotly</li>
-<li>Dire un mot la philosophie de son usage</li>
-<li>Refaire la série temporelle présentée en démo lors de la séance 1.</li>
+<li><a href="https://plotly.com/python/">Plotly</a> : des visualisations interractives</li>
+<li>“Plotly’s Python graphing library makes interactive, publication-quality graphs.”</li>
+<li>Sans trop d’effort (même si on peut faire des choses complexes)</li>
+<li>(également disponible en R, Julia, etc.)</li>
+</ul>
+
+<img data-src="./img/plotly.svg" class="quarto-figure quarto-figure-center r-stretch"></section>
+<section id="plotly" class="slide level2">
+<h2>Plotly</h2>
+<ul>
+<li>Plusieurs “niveaux” dans Plotly :
+<ul>
+<li>de l’interface “haut-niveau” pour la visualisation (<a href="https://plotly.com/python/plotly-express/">plotly express</a>)</li>
+<li>aux éléments “bas-niveau” pour triturer les figures</li>
+</ul></li>
+<li><em>i.e.</em> : des <a href="https://plotly.com/python-api-reference/index.html#submodules">submlodules</a> :
+<ul>
+<li>plotly.express</li>
+<li>plotly.graph_objects</li>
+<li>plotly.subplots</li>
+<li>plotly.figure_factory</li>
+<li>plotly.io</li>
+</ul></li>
 </ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
