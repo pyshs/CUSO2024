@@ -206,7 +206,23 @@ D'autres solutions qui permettent de créer des visualisations interactives
 
 ## Exemple de Plotly
 
-- Présenter Plotly
-- Dire un mot la philosophie de son usage
-- Refaire la série temporelle présentée en démo lors de la séance 1.
+- [Plotly](https://plotly.com/python/) : des visualisations interractives
+- "Plotly's Python graphing library makes interactive, publication-quality graphs."
+- Sans trop d'effort (même si on peut faire des choses complexes)
+- (également disponible en R, Julia, etc.)
 
+
+![](./img/plotly.svg){fig-align="center"}
+
+---
+
+## Plotly
+- Plusieurs "niveaux" dans Plotly :
+    - de l'interface "haut-niveau" pour la visualisation ([plotly express](https://plotly.com/python/plotly-express/))
+    - aux éléments "bas-niveau" pour triturer les figures
+- *i.e.* : des [submlodules](https://plotly.com/python-api-reference/index.html#submodules) :
+    - plotly.express
+    - plotly.graph_objects
+    - plotly.subplots
+    - plotly.figure_factory
+    - plotly.io
