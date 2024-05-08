@@ -3,10 +3,10 @@ title: "Python pour les SHS"
 subtitle: "Séance 5 : Statistiques et visualisations"
 author: "Émilien Schultz - Léo Mignot"
 date: 2024-05-05
-#format: pptx
-format:
-    revealjs:
-        slideNumber: true
+format: pptx
+#format:
+#    revealjs:
+#        slideNumber: true
 ---
 
 ## Où on est actuellement
