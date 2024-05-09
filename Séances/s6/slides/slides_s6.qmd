@@ -1,0 +1,316 @@
+---
+title: "Python pour les SHS"
+subtitle: "Séance 6 - Usages avancés"
+author: "Émilien Schultz - Léo Mignot"
+date: 2024-05-13
+format: 
+    revealjs:
+        slideNumber: true
+---
+
+## Aujourd'hui
+
+- Un usage avancé : Natural Language Processes (NLP)
+- Retour sur les démos :
+    - Construire un réseau
+    - Faire une application
+
+
+# Natural Language Processing
+
+## Une grande famille
+
+Un ensemble de techniques 
+
+- Lexicométrie (compter des mots)
+    - un peu *old school*
+- Machine Learning sur données textuelles
+- Modèles de langage.
+
+---
+
+## Point de départ : du texte
+
+- Un ensemble de caractères
+- Différents de niveaux de lecture :
+    - Paragraphe
+    - Phrase
+    - Mot
+    - Token ...
+
+---
+
+## Des tâches différentes
+
+- Représenter un texte
+- Classifier des textes
+    - Faire des groupes
+    - Retrouver des éléments
+- Identifier des éléments spécifiques
+    - Name Entity Recognition
+- Générer des textes
+
+Pour cela, il faut passer d'un texte à une représentation numérique.
+
+
+---
+
+## Point clé : représenter un texte
+
+- Par la présence de certains mots
+    - Approches par dictionnaires
+- Par l'ensemble des mots
+    - Approches par sac de mots
+    - Méthodes spécifiques : TF/IDF
+- Par encodage de la structure
+    - Approches par plongement (embeddings)
+    - +- contextuel
+---
+
+## Importance des modèles
+
+- Outils pré-entrainés
+    - Importance du corpus d'entrainement
+    - Spécifiques à la langue / type de textes
+- Sur une diversité de tâches
+    - Prédire la nature des entités (POS)
+    - Prédire le prochain mot (BERT)
+    - Prédire une entité (NER ...)
+- Dépendent de plusieurs niveaux
+    - Tokenisation
+    - Entrainement
+
+---
+
+## Une multitude de modèles
+
+- BERT
+    - pour le français[CamemBert](https://camembert-model.fr/)
+- Explosion des LLM
+    - Dépasse le NLP (par exemple, Whisper)
+    - [HuggingFace](https://huggingface.co/)
+
+---
+
+## Attention, ça peut être lourd
+
+- Des modèles de grande taille
+- Certains peuvent nécessiter des GPU
+- Penser à utiliser des services dédiés si nécessaires
+
+---
+
+## Préparer les textes
+
+Plusieurs manières de faire (plus ou moins automatisée)
+
+- tokenisation
+- suppression des mots vides
+- lemmatisation
+
+---
+
+## Les bibliothèques
+
+- Avant, NLTK
+- Le plus pratique : SpaCy
+- Faire du ML avec Scikit-learn
+- Utiliser directement des modèles avec Transformers
+- Ou des bibliothèques construites dessus
+
+---
+
+## Cas 1A : construire un Document-Term Matrice
+
+Passer un texte en vecteur
+
+- Prendre chaque document
+- Réduire à un sac de mots
+- Construire une matrice textes - mots
+- `Scikit-learn` avec `CountVectorizer` 
+
+---
+
+## Cas 1B : transformation TF-IDF
+
+- Term Frequency-Inverse Document Frequency
+- Amélioration du DTM
+- Approche souvent utilisée pour mettre en valeur les mots les plus spécifiques
+- `Scikit-learn` a `TfidfVectorizer`
+
+$$\text{TF-IDF}(t, d, D) = \left( \frac{f_{t,d}}{n_d} \right) \times \log \left(\frac{N}{\text{df}_t} \right)
+$$
+
+Et ensuite, facile de faire une classification par exemple
+
+
+---
+
+## Cas 2 : plongement (Word2Vec, Fasttext, GloVe etc.)
+
+- Principe : créer une représentation vectorielle dense des mots sur la base d'un corpus
+    - Modèle entraîné à prédire les mots proches
+    - On garde la représentation numérique
+- Des modèles pré-entraînés / entrainables
+    - [Word2vec](https://radimrehurek.com/gensim/models/word2vec.html)
+    - [Fasttext](https://fasttext.cc/)
+
+Non contextuel : *L’embedding (la représentation vectorielle) de chaque document correspond à la moyenne des word-embeddings des mots qui le composent*
+
+---
+
+## Cas 3A : Name Entity Recognition
+
+- `SpaCy` a des modèles entraînés pour les NER
+- Par exemple pour le français, [plusieurs modèles sont disponibles](https://spacy.io/models/fr)
+    - Avec des architectures différentes
+- Une bibliothèque qui donne un framework commun.
+
+
+---
+
+## Cas 3B : allons plus loin
+
+- Limites avec les modèles existant : existe-t-il des stratégies plus récentes ? 
+- Utilsons le modèle [GliNER disponible sur HuggingFace](https://github.com/urchade/GLiNER)
+
+
+```{.python}
+pip install gliner
+```
+
+---
+
+## Cas 4 : topic modeling
+
+- Différentes stratégies pour identifier des thématiques
+    - préhistoire : LDA
+    - pipelines comme [BERTOPIC](https://maartengr.github.io/BERTopic/index.html)
+- Un enchaînement de transformations
+    - représentation
+    - réduction de dimensionalité
+    - classification
+    - synthèse
+- A la main ou intégré
+
+---
+
+## Pour aller plus loin
+
+- [le cours de Lino Galliana](https://pythonds.linogaliana.fr/content/NLP/)
+
+# Retour sur les démos
+
+## Explorer des réseaux
+
+- Représenter des données relationnelles
+    - Entités (noeuds)
+    - Reliées (ou pas) par des liens
+- Différents niveaux d'analyse
+    - Structure générale
+    - Effets locaux (clusters?)
+    - Propriétés des noeuds
+
+---
+
+## Un domaine assez étendu
+
+- Techniques statistiques avancées
+- Enjeux de visualisation
+
+---
+
+## Python ?
+
+- Facilité de construire des objets réseaux
+- De les manipuler
+- D'autres logiciels pour l'analyse
+
+---
+
+## Notre stack
+
+- Données de départ
+- `NetworkX` pour construire un objet graph & les statistiques
+- `Ipysigma` pour la visualisation exploratoire
+- Puis si besoin, `Gephi` pour les manipulations
+
+---
+
+## Les applications
+
+- Des solutions facilitant le prototypage
+    - Streamlit
+    - Gradio
+    - Voilà + Jupyter
+    - Flask
+    - Fastapi..
+- Spécifiques à des besoins
+- Du prototypage au site complet
+- Des coûts d'entrée variables
+
+---
+
+## Prototyper c'est simple
+
+Streamlit gère toute la partie serveur et permet de faire directement du Python avec des composants spécifiques
+
+Un fichier `script.py`
+
+```{.python}
+import streamlit as st
+
+if button("Bouton à cliquer"):
+    st.write("Coucou")
+
+```
+
+puis `streamlit run script.py`
+
+# Conclusion générale
+
+---
+
+## Bien sûr, tout n'a pas été abordé
+
+- Construction de logiciels
+    - Même si on a rapidement parlé de Streamlit
+- Machine learning avancé
+    - Par exemple, le clustering
+    - Fine-tuning de modèles
+- Big Data
+    - Dask, Spark
+
+---
+
+## Mais quand même...
+
+- Notion générale du langage
+- Familiarité avec la pratique de la programmation scientifique
+- Culture générale du domaine
+
+De quoi se poser les questions, planifier la démarche, et réutiliser des outils existants.
+
+---
+
+## La suite ?
+
+- De bonnes bases
+- Monter en compétence prend du temps
+    - Faire la part des choses
+        - Soi-même
+        - Déléguer (en partie)
+- Partir sur un projet
+    - Incrémenter
+
+Si besoin, vous avez nos mails
+
+
+<!-- 
+Points pour le futur :
+
+- passer plus de temps sur l'étape de nettoyage
+- creuser sur l'obtention des vecteurs du word2vec
+- trouver un corpus textuel
+
+-->
