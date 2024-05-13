@@ -22,27 +22,29 @@ format:
 
 Un ensemble de techniques 
 
-- Lexicométrie (compter des mots)
+- **Lexicométrie** (compter des mots)
     - un peu *old school*
-- Machine Learning sur données textuelles
-- Modèles de langage.
+- **Machine Learning** sur données textuelles vectorisées
+- Évolution vers les **modèles de langage**
+    - Approches potentiellement plus proche du langage naturel
 
 ---
 
 ## Point de départ : du texte
 
-- Un ensemble de caractères
+- Un ensemble de caractères regroupés suivant des règles plus ou moins explicites dans une structure
+    - Avec des fautes, des problèmes d'OCRisation, etc.
 - Différents de niveaux de lecture :
     - Paragraphe
     - Phrase
     - Mot
     - Token ...
+- (+ enjeux de spatialisation dans un document / photo)
 
 ---
 
 ## Des tâches différentes
 
-- Représenter un texte
 - Classifier des textes
     - Faire des groupes
     - Retrouver des éléments
@@ -55,21 +57,21 @@ Pour cela, il faut passer d'un texte à une représentation numérique.
 
 ---
 
-## Point clé : représenter un texte
+## Passage clé : représenter un texte
 
 - Par la présence de certains mots
     - Approches par dictionnaires
 - Par l'ensemble des mots
-    - Approches par sac de mots
-    - Méthodes spécifiques : TF/IDF
+    - Approches par *sacs de mots*
+    - + méthodes spécifiques : TF/IDF
 - Par encodage de la structure
     - Approches par plongement (embeddings)
     - +- contextuel
 ---
 
-## Importance des modèles
+## Place des modèles
 
-- Outils pré-entrainés
+- Outils pré-entrainés permettant la prédiction
     - Importance du corpus d'entrainement
     - Spécifiques à la langue / type de textes
 - Sur une diversité de tâches
@@ -84,13 +86,23 @@ Pour cela, il faut passer d'un texte à une représentation numérique.
 
 ## Une multitude de modèles
 
-- BERT
-    - pour le français[CamemBert](https://camembert-model.fr/)
+- Transformers
+    - BERT
+        - pour le français [CamemBert](https://camembert-model.fr/)
 - Explosion des LLM
     - Dépasse le NLP (par exemple, Whisper)
     - [HuggingFace](https://huggingface.co/)
 
 ---
+
+## Histoire ...
+
+![](img/model_history.png){width=500}
+
+https://blog.dataiku.com/nlp-metamorphosis
+
+---
+
 
 ## Attention, ça peut être lourd
 
@@ -108,15 +120,19 @@ Plusieurs manières de faire (plus ou moins automatisée)
 - suppression des mots vides
 - lemmatisation
 
+Pour de nombreux besoins spécifiques, intéressant de maîtriser les manipulations de bas niveaux
+
+- Par ex, remplacer certains noms composés par des tokens
+
 ---
 
 ## Les bibliothèques
 
-- Avant, NLTK
-- Le plus pratique : SpaCy
-- Faire du ML avec Scikit-learn
-- Utiliser directement des modèles avec Transformers
-- Ou des bibliothèques construites dessus
+- Avant, `NLTK`
+- Le plus pratique : `SpaCy`
+- Faire du ML avec `Scikit-learn`
+- Utiliser directement des modèles de HuggingFace avec `Transformers`
+- Ou des bibliothèques construites dessus ...
 
 ---
 

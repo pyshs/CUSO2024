@@ -425,18 +425,24 @@
 <h2>Une grande famille</h2>
 <p>Un ensemble de techniques</p>
 <ul>
-<li>Lexicométrie (compter des mots)
+<li><strong>Lexicométrie</strong> (compter des mots)
 <ul>
 <li>un peu <em>old school</em></li>
 </ul></li>
-<li>Machine Learning sur données textuelles</li>
-<li>Modèles de langage.</li>
+<li><strong>Machine Learning</strong> sur données textuelles vectorisées</li>
+<li>Évolution vers les <strong>modèles de langage</strong>
+<ul>
+<li>Approches potentiellement plus proche du langage naturel</li>
+</ul></li>
 </ul>
 </section>
 <section id="point-de-départ-du-texte" class="slide level2">
 <h2>Point de départ : du texte</h2>
 <ul>
-<li>Un ensemble de caractères</li>
+<li>Un ensemble de caractères regroupés suivant des règles plus ou moins explicites dans une structure
+<ul>
+<li>Avec des fautes, des problèmes d’OCRisation, etc.</li>
+</ul></li>
 <li>Différents de niveaux de lecture :
 <ul>
 <li>Paragraphe</li>
@@ -444,12 +450,12 @@
 <li>Mot</li>
 <li>Token …</li>
 </ul></li>
+<li>(+ enjeux de spatialisation dans un document / photo)</li>
 </ul>
 </section>
 <section id="des-tâches-différentes" class="slide level2">
 <h2>Des tâches différentes</h2>
 <ul>
-<li>Représenter un texte</li>
 <li>Classifier des textes
 <ul>
 <li>Faire des groupes</li>
@@ -463,8 +469,8 @@
 </ul>
 <p>Pour cela, il faut passer d’un texte à une représentation numérique.</p>
 </section>
-<section id="point-clé-représenter-un-texte" class="slide level2">
-<h2>Point clé : représenter un texte</h2>
+<section id="passage-clé-représenter-un-texte" class="slide level2">
+<h2>Passage clé : représenter un texte</h2>
 <ul>
 <li>Par la présence de certains mots
 <ul>
@@ -472,8 +478,10 @@
 </ul></li>
 <li>Par l’ensemble des mots
 <ul>
-<li>Approches par sac de mots</li>
-<li>Méthodes spécifiques : TF/IDF</li>
+<li>Approches par <em>sacs de mots</em></li>
+<li><ul>
+<li>méthodes spécifiques : TF/IDF</li>
+</ul></li>
 </ul></li>
 <li>Par encodage de la structure
 <ul>
@@ -482,10 +490,10 @@
 </ul></li>
 </ul>
 </section>
-<section id="importance-des-modèles" class="slide level2">
-<h2>Importance des modèles</h2>
+<section id="place-des-modèles" class="slide level2">
+<h2>Place des modèles</h2>
 <ul>
-<li>Outils pré-entrainés
+<li>Outils pré-entrainés permettant la prédiction
 <ul>
 <li>Importance du corpus d’entrainement</li>
 <li>Spécifiques à la langue / type de textes</li>
@@ -506,9 +514,12 @@
 <section id="une-multitude-de-modèles" class="slide level2">
 <h2>Une multitude de modèles</h2>
 <ul>
+<li>Transformers
+<ul>
 <li>BERT
 <ul>
-<li>pour le français<a href="https://camembert-model.fr/">CamemBert</a></li>
+<li>pour le français <a href="https://camembert-model.fr/">CamemBert</a></li>
+</ul></li>
 </ul></li>
 <li>Explosion des LLM
 <ul>
@@ -516,6 +527,11 @@
 <li><a href="https://huggingface.co/">HuggingFace</a></li>
 </ul></li>
 </ul>
+</section>
+<section id="histoire" class="slide level2">
+<h2>Histoire …</h2>
+
+<img data-src="img/model_history.png" width="500" class="r-stretch"><p>https://blog.dataiku.com/nlp-metamorphosis</p>
 </section>
 <section id="attention-ça-peut-être-lourd" class="slide level2">
 <h2>Attention, ça peut être lourd</h2>
@@ -533,15 +549,19 @@
 <li>suppression des mots vides</li>
 <li>lemmatisation</li>
 </ul>
+<p>Pour de nombreux besoins spécifiques, intéressant de maîtriser les manipulations de bas niveaux</p>
+<ul>
+<li>Par ex, remplacer certains noms composés par des tokens</li>
+</ul>
 </section>
 <section id="les-bibliothèques" class="slide level2">
 <h2>Les bibliothèques</h2>
 <ul>
-<li>Avant, NLTK</li>
-<li>Le plus pratique : SpaCy</li>
-<li>Faire du ML avec Scikit-learn</li>
-<li>Utiliser directement des modèles avec Transformers</li>
-<li>Ou des bibliothèques construites dessus</li>
+<li>Avant, <code>NLTK</code></li>
+<li>Le plus pratique : <code>SpaCy</code></li>
+<li>Faire du ML avec <code>Scikit-learn</code></li>
+<li>Utiliser directement des modèles de HuggingFace avec <code>Transformers</code></li>
+<li>Ou des bibliothèques construites dessus …</li>
 </ul>
 </section>
 <section id="cas-1a-construire-un-document-term-matrice" class="slide level2">
@@ -566,8 +586,8 @@
 \]</span></p>
 <p>Et ensuite, facile de faire une classification par exemple</p>
 </section>
-<section id="cas-2-plongement-word2vec-fasttext-etc." class="slide level2">
-<h2>Cas 2 : plongement (Word2Vec, Fasttext, etc.)</h2>
+<section id="cas-2-plongement-word2vec-fasttext-glove-etc." class="slide level2">
+<h2>Cas 2 : plongement (Word2Vec, Fasttext, GloVe etc.)</h2>
 <ul>
 <li>Principe : créer une représentation vectorielle dense des mots sur la base d’un corpus
 <ul>
@@ -746,6 +766,14 @@
 </ul></li>
 </ul>
 <p>Si besoin, vous avez nos mails</p>
+<!-- 
+Points pour le futur :
+
+- passer plus de temps sur l'étape de nettoyage
+- creuser sur l'obtention des vecteurs du word2vec
+- trouver un corpus textuel
+
+-->
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
